@@ -12,7 +12,7 @@ export default class WhiteByTheGlass extends React.Component {
       <View>
 
         <View style={styles.columnTitle}>
-          <Text>White</Text>
+          <Text style={styles.titleText}>White</Text>
         </View>
 
         <View style={styles.itemListFlex}>
@@ -22,7 +22,6 @@ export default class WhiteByTheGlass extends React.Component {
               onPress={this.handleTouchSancerre}
             >
               <View style={styles.itemFlex}>
-                  <Text style={styles.code}>3314</Text>
                   <Text style={styles.type}>SANCERRE</Text>
                   <Text style={styles.brand}>R&D RAIMBAULT</Text>
                   <Text style={styles.year}>'15</Text>
@@ -31,10 +30,9 @@ export default class WhiteByTheGlass extends React.Component {
             <Text style={styles.price}>16</Text>
           </View>
 
-          <View style={styles.itemFlex}>
+          <View style={styles.itemFlexOuter}>
             <TouchableHighlight>
             <View style={styles.itemFlex}>
-                <Text style={styles.code}>3631</Text>
                 <Text style={styles.type}>PETIT CHABLIS</Text>
                 <Text style={styles.brand}>C&L PINSON</Text>
                 <Text style={styles.year}>'15</Text>
@@ -43,12 +41,10 @@ export default class WhiteByTheGlass extends React.Component {
             <Text style={styles.price}>13</Text>
           </View>
 
-          <View style={styles.itemFlex}>
+          <View style={styles.itemFlexOuter}>
             <TouchableHighlight>
             <View style={styles.itemFlex}>
-                <Text style={styles.code}>3512</Text>
                 <Text style={styles.type}>ST VERAN</Text>
-                <Text style={styles.quote}>"LES CRAS"</Text>
                 <Text style={styles.brand}>DOMAINE DES VALANGES</Text>
                 <Text style={styles.year}>'14</Text>
               </View>
@@ -56,12 +52,10 @@ export default class WhiteByTheGlass extends React.Component {
             <Text style={styles.price}>14</Text>
           </View>
 
-          <View style={styles.itemFlex}>
+          <View style={styles.itemFlexOuter}>
             <TouchableHighlight>
             <View style={styles.itemFlex}>
-                <Text style={styles.code}>3403</Text>
                 <Text style={styles.type}>ALSACE PINOT BLANC</Text>
-                <Text style={styles.quote}>"CUVEE LES AMOURS"</Text>
                 <Text style={styles.brand}>HUGEL</Text>
                 <Text style={styles.year}>'14</Text>
               </View>
@@ -82,6 +76,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa'
   },
   itemFlexOuter: {
+    width: 340,
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
@@ -95,8 +90,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: 20
   },
+  titleText: {
+    fontFamily: 'SavoyeLetPlain',
+    fontSize: 40
+  },
   code: {
     fontSize: 10,
+    marginTop: 7
   },
   type: {
     fontSize: 18,
@@ -108,10 +108,16 @@ const styles = StyleSheet.create({
   },
   brand: {
     fontSize: 12,
-    marginLeft: 5
+    marginLeft: 10,
+    marginTop: 6
   },
   year: {
-    fontSize: 10,
-    marginLeft: 5
+    fontSize: 12,
+    marginLeft: 5,
+    marginTop: 6
+  },
+  price: {
+    fontSize: 14,
+    marginTop: 9
   }
 })

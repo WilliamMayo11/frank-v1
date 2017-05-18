@@ -21,8 +21,14 @@ export default class App extends React.Component {
         maximumZoomScale={3}
       >
         <View style={styles.menuColumns}>
-          <WhiteByTheGlass />
-          <RedByTheGlass />
+
+          <View style={styles.whiteColumn}>
+            <WhiteByTheGlass />
+          </View>
+
+          <View style={styles.redColumn}>
+            <RedByTheGlass />
+          </View>
         </View>
       </ScrollView>
     )
@@ -40,7 +46,14 @@ const styles = StyleSheet.create({
   menuColumns: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     marginTop: 100
+  },
+  whiteColumn: {
+    marginLeft: 90
+  },
+  redColumn: {
+    marginLeft: 60,
+    marginRight: 100
   }
 })

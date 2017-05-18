@@ -7,17 +7,15 @@ export default class RedByTheGlass extends React.Component {
       <View>
 
         <View style={styles.columnTitle}>
-          <Text>Red</Text>
+          <Text style={styles.titleText}>Red</Text>
         </View>
 
         <View style={styles.itemListFlex}>
 
-          <View style={styles.itemFlex}>
+          <View style={styles.itemFlexOuter}>
             <TouchableHighlight>
             <View style={styles.itemFlex}>
-                <Text style={styles.code}>4401</Text>
                 <Text style={styles.type}>GIVRY</Text>
-                <Text style={styles.quote}>1ER CRU "CREMILLONS"</Text>
                 <Text style={styles.brand}>DOMAINE SEGUIN-MANUEL</Text>
                 <Text style={styles.year}>'14</Text>
               </View>
@@ -25,10 +23,9 @@ export default class RedByTheGlass extends React.Component {
             <Text style={styles.price}>17</Text>
           </View>
 
-          <View style={styles.itemFlex}>
+          <View style={styles.itemFlexOuter}>
             <TouchableHighlight>
             <View style={styles.itemFlex}>
-                <Text style={styles.code}>4301</Text>
                 <Text style={styles.type}>MOULIN-A-VENT</Text>
                 <Text style={styles.brand}>BARBET</Text>
                 <Text style={styles.year}>'13</Text>
@@ -37,10 +34,9 @@ export default class RedByTheGlass extends React.Component {
             <Text style={styles.price}>12</Text>
           </View>
 
-          <View style={styles.itemFlex}>
+          <View style={styles.itemFlexOuter}>
             <TouchableHighlight>
             <View style={styles.itemFlex}>
-                <Text style={styles.code}>4602</Text>
                 <Text style={styles.type}>ST EMILION</Text>
                 <Text style={styles.brand}>CLOS CASTELOT</Text>
                 <Text style={styles.year}>'12</Text>
@@ -49,10 +45,9 @@ export default class RedByTheGlass extends React.Component {
             <Text style={styles.price}>14</Text>
           </View>
 
-          <View style={styles.itemFlex}>
+          <View style={styles.itemFlexOuter}>
             <TouchableHighlight>
             <View style={styles.itemFlex}>
-                <Text style={styles.code}>4616</Text>
                 <Text style={styles.type}>ST ESTEPHE</Text>
                 <Text style={styles.brand}>CHATEAU HAUT BEAUSEJOUR</Text>
                 <Text style={styles.year}>'13</Text>
@@ -73,6 +68,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#fafafa'
   },
+  itemFlexOuter: {
+    width: 340,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
   itemFlex: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -83,25 +83,35 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: 20
   },
+  titleText: {
+    fontFamily: 'SavoyeLetPlain',
+    fontSize: 40
+  },
   code: {
     fontSize: 10,
-    margin: 2
+    marginTop: 7
   },
   type: {
-    fontSize: 14,
-    margin: 2
+    fontSize: 18,
+    marginLeft: 5
   },
   quote: {
-    fontSize: 11,
-    margin: 2
+    fontSize: 10,
+    marginLeft: 5
   },
   brand: {
-    fontSize: 11,
-    margin: 2
+    fontSize: 12,
+    marginLeft: 10,
+    marginTop: 6
   },
   year: {
-    fontSize: 10,
-    margin: 2
+    fontSize: 12,
+    marginLeft: 5,
+    marginTop: 6
+  },
+  price: {
+    fontSize: 14,
+    marginTop: 9
   }
 })
 
