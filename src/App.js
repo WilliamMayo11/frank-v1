@@ -1,6 +1,9 @@
 import React from 'react';
 import { ScrollView, Text, View, StyleSheet } from 'react-native';
 
+import RedByTheGlass from './Components/RedByTheGlass';
+import WhiteByTheGlass from './Components/WhiteByTheGlass';
+
 export default class App extends React.Component {
 
   constructor(props) {
@@ -17,17 +20,10 @@ export default class App extends React.Component {
         minimumZoomScale={1}
         maximumZoomScale={3}
       >
-        <Text>This is the entire menu</Text>
-        <Text>This is the entire menu</Text>
-        <Text>This is the entire menu</Text>
-        <Text>This is the entire menu</Text>
-        <Text>This is the entire menu</Text>
-        <Text>This is the entire menu</Text>
-        <Text>This is the entire menu</Text>
-        <Text>This is the entire menu</Text>
-        <Text>This is the entire menu</Text>
-        <Text>This is the entire menu</Text>
-        <Text>This is the entire menu</Text>
+        <View style={styles.menuColumns}>
+          <WhiteByTheGlass />
+          <RedByTheGlass />
+        </View>
       </ScrollView>
     )
   }
@@ -40,5 +36,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fafafa'
+  },
+  menuColumns: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 100
   }
 })
