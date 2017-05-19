@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa'
   },
   itemFlexOuter: {
-    width: 340,
+    width: 360,
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   titleText: {
-    fontFamily: 'SavoyeLetPlain',
+    fontFamily: 'SnellRoundhand-Bold',
     fontSize: 40
   },
   code: {

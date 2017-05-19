@@ -1,10 +1,19 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableHighlight } from 'react-native';
+import { View, Text, StyleSheet, TouchableHighlight, Modal, ScrollView } from 'react-native';
 
 export default class WhiteByTheGlass extends React.Component {
 
-  handleTouchSancerre() {
-    console.log('Sancerre touched');
+  state = {
+    sancerreVisible: false,
+    petitChablisVisible: false,
+  }
+
+  showSancerreModal(visible) {
+    this.setState({sancerreVisible: visible});
+  }
+
+  showPetitChablisModal(visible) {
+    this.setState({petitChablisVisible: visible});
   }
 
   render() {
@@ -17,22 +26,94 @@ export default class WhiteByTheGlass extends React.Component {
 
         <View style={styles.itemListFlex}>
 
+
+
+
+
+
+
           <View style={styles.itemFlexOuter}>
+            <Modal
+              animationType={"fade"}
+              transparent={true}
+              visible={this.state.sancerreVisible}
+              onRequestClose={() => {alert("Modal has been closed.")}}
+              >
+              <View style={styles.contentContainer}>
+                <ScrollView
+                  style={styles.sancerreModal}
+                  minimumZoomScale={1}
+                  maximumZoomScale={3}
+                >
+                  <View>
+                    <Text style={styles.modalTitle}>Sancerre</Text>
+
+                    <TouchableHighlight onPress={() => {
+                      this.showSancerreModal(!this.state.sancerreVisible)
+                    }}>
+                      <Text style={styles.closeModalText}>Got it!</Text>
+                    </TouchableHighlight>
+
+                  </View>
+                </ScrollView>
+              </View>
+            </Modal>
+
             <TouchableHighlight
-              onPress={this.handleTouchSancerre}
+              onPress={() => {
+                this.showSancerreModal(true)
+              }}
             >
               <View style={styles.itemFlex}>
-                  <Text style={styles.type}>SANCERRE</Text>
-                  <Text style={styles.brand}>R&D RAIMBAULT</Text>
-                  <Text style={styles.year}>'15</Text>
-                </View>
+                <Text style={styles.type}>SANCERRE</Text>
+                <Text style={styles.brand}>R&D RAIMBAULT</Text>
+                <Text
+                  style={styles.year}>'15
+                </Text>
+              </View>
             </TouchableHighlight>
             <Text style={styles.price}>16</Text>
           </View>
 
+
+
+
+
+
+
           <View style={styles.itemFlexOuter}>
-            <TouchableHighlight>
-            <View style={styles.itemFlex}>
+
+            <Modal
+              animationType={"fade"}
+              transparent={true}
+              visible={this.state.petitChablisVisible}
+              onRequestClose={() => {alert("Modal has been closed.")}}
+              >
+              <ScrollView
+                style={styles.petitChablisModal}
+                minimumZoomScale={1}
+                maximumZoomScale={3}
+              >
+                <View>
+                  <Text style={styles.modalText}>Petit Chablis</Text>
+
+                  <TouchableHighlight onPress={() => {
+                    this.showPetitChablisModal(!this.state.petitChablisVisible)
+                  }}>
+                    <Text style={styles.modalText}>Hide Modal</Text>
+                  </TouchableHighlight>
+
+                </View>
+              </ScrollView>
+            </Modal>
+
+
+            <TouchableHighlight
+              onPress={() => {
+                this.showPetitChablisModal(true)
+              }}
+            >
+              <View style={styles.itemFlex}>
                 <Text style={styles.type}>PETIT CHABLIS</Text>
                 <Text style={styles.brand}>C&L PINSON</Text>
                 <Text style={styles.year}>'15</Text>
@@ -40,6 +121,11 @@ export default class WhiteByTheGlass extends React.Component {
             </TouchableHighlight>
             <Text style={styles.price}>13</Text>
           </View>
+
+
+
+
+
 
           <View style={styles.itemFlexOuter}>
             <TouchableHighlight>
@@ -91,7 +177,7 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   titleText: {
-    fontFamily: 'SavoyeLetPlain',
+    fontFamily: 'SnellRoundhand-Bold',
     fontSize: 40
   },
   code: {
@@ -119,5 +205,31 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 14,
     marginTop: 9
+  },
+  contentContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+  },
+  sancerreModal: {
+    marginTop: 200,
+    marginBottom: 600,
+    width: 600,
+    backgroundColor: 'rgba(9, 9, 9, .7)'
+  },
+  petitChablisModal: {
+    marginTop: 200,
+    height: 100,
+    width: 400,
+    backgroundColor: 'rgba(9, 9, 9, .7)'
+  },
+  modalTitle: {
+    color: 'white',
+    fontSize: 40
+  },
+  closeModalText: {
+    color: 'white',
+    fontSize: 20
   }
 })
