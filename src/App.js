@@ -15,6 +15,7 @@ export default class App extends React.Component {
 
   render() {
     return(
+
       <ScrollView
         contentContainerStyle={styles.contentContainer}
         minimumZoomScale={1}
@@ -54,7 +55,9 @@ export default class App extends React.Component {
             <RedByTheGlass />
           </View>
         </View>
+
       </ScrollView>
+
     )
   }
 

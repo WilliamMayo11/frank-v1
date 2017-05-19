@@ -34,12 +34,6 @@ export default class WhiteByTheGlass extends React.Component {
 
         <View style={styles.itemListFlex}>
 
-
-
-
-
-
-
           <View style={styles.itemFlexOuter}>
             <Modal
               animationType={"fade"}
@@ -51,10 +45,25 @@ export default class WhiteByTheGlass extends React.Component {
                 <ScrollView
                   style={styles.sancerreModal}
                   minimumZoomScale={1}
-                  maximumZoomScale={3}
+                  maximumZoomScale={1.5}
                 >
                   <View>
                     <Text style={styles.modalTitle}>Sancerre</Text>
+
+                    <View style={styles.modalContents}>
+                      <View style={styles.blend}>
+                        <Text>100% Sauvignon Blanc</Text>
+                      </View>
+                      <View style={styles.funFact}>
+                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                      </View>
+                      <View style={styles.flavor}>
+                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                      </View>
+                      <View style={styles.pairing}>
+                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                      </View>
+                    </View>
 
                     <TouchableHighlight onPress={() => {
                       this.showSancerreModal(!this.state.sancerreVisible)
@@ -72,12 +81,13 @@ export default class WhiteByTheGlass extends React.Component {
                 this.showSancerreModal(true)
               }}
             >
-              <View style={styles.itemFlex}>
+              <View>
                 <Text style={styles.type}>SANCERRE</Text>
-                <Text style={styles.brand}>R&D RAIMBAULT</Text>
-                <Text
-                  style={styles.year}>'15
-                </Text>
+                  <View style={styles.itemFlex}>
+                    <Text style={styles.code}>3314</Text>
+                    <Text style={styles.brand}>R&D RAIMBAULT</Text>
+                    <Text style={styles.year}>'15</Text>
+                  </View>
               </View>
             </TouchableHighlight>
             <Text style={styles.price}>16</Text>
@@ -90,41 +100,59 @@ export default class WhiteByTheGlass extends React.Component {
 
 
           <View style={styles.itemFlexOuter}>
-
             <Modal
               animationType={"fade"}
               transparent={true}
               visible={this.state.petitChablisVisible}
               onRequestClose={() => {alert("Modal has been closed.")}}
               >
-              <ScrollView
-                style={styles.petitChablisModal}
-                minimumZoomScale={1}
-                maximumZoomScale={3}
-              >
-                <View>
-                  <Text style={styles.modalText}>Petit Chablis</Text>
+              <View style={styles.ModalContentContainer}>
+                <ScrollView
+                  style={styles.sancerreModal}
+                  minimumZoomScale={1}
+                  maximumZoomScale={1.5}
+                >
+                  <View>
+                    <Text style={styles.modalTitle}>PETIT CHABLIS</Text>
 
-                  <TouchableHighlight onPress={() => {
-                    this.showPetitChablisModal(!this.state.petitChablisVisible)
-                  }}>
-                    <Text style={styles.modalText}>Hide Modal</Text>
-                  </TouchableHighlight>
+                    <View style={styles.modalContents}>
+                      <View style={styles.blend}>
+                        <Text>100% Chardonnay</Text>
+                      </View>
+                      <View style={styles.funFact}>
+                        <Text>Vinified without oak.</Text>
+                      </View>
+                      <View style={styles.flavor}>
+                        <Text>Dry. Light/medium-bodied. Crisp acidity, bright minerality, ripe citrus & green apple fruit flavors.</Text>
+                      </View>
+                      <View style={styles.pairing}>
+                        <Text>Pairs well with all seafood, especially oysters.</Text>
+                      </View>
+                    </View>
 
-                </View>
-              </ScrollView>
+                    <TouchableHighlight onPress={() => {
+                      this.showPetitChablisModal(!this.state.petitChablisVisible)
+                    }}>
+                      <Text style={styles.closeModalText}>Got it!</Text>
+                    </TouchableHighlight>
+
+                  </View>
+                </ScrollView>
+              </View>
             </Modal>
-
 
             <TouchableHighlight
               onPress={() => {
                 this.showPetitChablisModal(true)
               }}
             >
-              <View style={styles.itemFlex}>
+              <View>
                 <Text style={styles.type}>PETIT CHABLIS</Text>
-                <Text style={styles.brand}>C&L PINSON</Text>
-                <Text style={styles.year}>'15</Text>
+                  <View style={styles.itemFlex}>
+                    <Text style={styles.code}>3631</Text>
+                    <Text style={styles.brand}>C&L PINSON</Text>
+                    <Text style={styles.year}>'15</Text>
+                  </View>
               </View>
             </TouchableHighlight>
             <Text style={styles.price}>13</Text>
@@ -135,27 +163,134 @@ export default class WhiteByTheGlass extends React.Component {
 
 
 
-          <View style={styles.itemFlexOuter}>
-            <TouchableHighlight>
-            <View style={styles.itemFlex}>
-                <Text style={styles.type}>ST VERAN</Text>
-                <Text style={styles.brand}>DOMAINE DES VALANGES</Text>
-                <Text style={styles.year}>'14</Text>
-              </View>
-            </TouchableHighlight>
-            <Text style={styles.price}>14</Text>
-          </View>
+
+
 
           <View style={styles.itemFlexOuter}>
-            <TouchableHighlight>
-            <View style={styles.itemFlex}>
-                <Text style={styles.type}>ALSACE PINOT BLANC</Text>
-                <Text style={styles.brand}>HUGEL</Text>
-                <Text style={styles.year}>'14</Text>
+            <Modal
+              animationType={"fade"}
+              transparent={true}
+              visible={this.state.sancerreVisible}
+              onRequestClose={() => {alert("Modal has been closed.")}}
+              >
+              <View style={styles.ModalContentContainer}>
+                <ScrollView
+                  style={styles.sancerreModal}
+                  minimumZoomScale={1}
+                  maximumZoomScale={1.5}
+                >
+                  <View>
+                    <Text style={styles.modalTitle}>Sancerre</Text>
+
+                    <View style={styles.modalContents}>
+                      <View style={styles.blend}>
+                        <Text>100% Sauvignon Blanc</Text>
+                      </View>
+                      <View style={styles.funFact}>
+                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                      </View>
+                      <View style={styles.flavor}>
+                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                      </View>
+                      <View style={styles.pairing}>
+                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                      </View>
+                    </View>
+
+                    <TouchableHighlight onPress={() => {
+                      this.showSancerreModal(!this.state.sancerreVisible)
+                    }}>
+                      <Text style={styles.closeModalText}>Got it!</Text>
+                    </TouchableHighlight>
+
+                  </View>
+                </ScrollView>
+              </View>
+            </Modal>
+
+            <TouchableHighlight
+              onPress={() => {
+                this.showSancerreModal(true)
+              }}
+            >
+              <View>
+                <Text style={styles.type}>SANCERRE</Text>
+                  <View style={styles.itemFlex}>
+                    <Text style={styles.code}>3314</Text>
+                    <Text style={styles.brand}>R&D RAIMBAULT</Text>
+                    <Text style={styles.year}>'15</Text>
+                  </View>
               </View>
             </TouchableHighlight>
-            <Text style={styles.price}>11</Text>
+            <Text style={styles.price}>16</Text>
           </View>
+
+
+
+
+
+
+
+
+          <View style={styles.itemFlexOuter}>
+            <Modal
+              animationType={"fade"}
+              transparent={true}
+              visible={this.state.sancerreVisible}
+              onRequestClose={() => {alert("Modal has been closed.")}}
+              >
+              <View style={styles.ModalContentContainer}>
+                <ScrollView
+                  style={styles.sancerreModal}
+                  minimumZoomScale={1}
+                  maximumZoomScale={1.5}
+                >
+                  <View>
+                    <Text style={styles.modalTitle}>Sancerre</Text>
+
+                    <View style={styles.modalContents}>
+                      <View style={styles.blend}>
+                        <Text>100% Sauvignon Blanc</Text>
+                      </View>
+                      <View style={styles.funFact}>
+                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                      </View>
+                      <View style={styles.flavor}>
+                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                      </View>
+                      <View style={styles.pairing}>
+                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                      </View>
+                    </View>
+
+                    <TouchableHighlight onPress={() => {
+                      this.showSancerreModal(!this.state.sancerreVisible)
+                    }}>
+                      <Text style={styles.closeModalText}>Got it!</Text>
+                    </TouchableHighlight>
+
+                  </View>
+                </ScrollView>
+              </View>
+            </Modal>
+
+            <TouchableHighlight
+              onPress={() => {
+                this.showSancerreModal(true)
+              }}
+            >
+              <View>
+                <Text style={styles.type}>SANCERRE</Text>
+                  <View style={styles.itemFlex}>
+                    <Text style={styles.code}>3314</Text>
+                    <Text style={styles.brand}>R&D RAIMBAULT</Text>
+                    <Text style={styles.year}>'15</Text>
+                  </View>
+              </View>
+            </TouchableHighlight>
+            <Text style={styles.price}>16</Text>
+          </View>
+
         </View>
       </View>
     );
@@ -193,11 +328,13 @@ const styles = StyleSheet.create({
 
   code: {
     fontSize: 10,
-    marginTop: 7
+    marginTop: -1,
+    marginLeft: 10
   },
   type: {
     fontSize: 18,
-    marginLeft: 5
+    marginLeft: 12,
+    marginTop: 10
   },
   quote: {
     fontSize: 10,
@@ -205,17 +342,17 @@ const styles = StyleSheet.create({
   },
   brand: {
     fontSize: 12,
-    marginLeft: 10,
-    marginTop: 6
+    marginLeft: 5,
+    marginTop: -2
   },
   year: {
     fontSize: 12,
     marginLeft: 5,
-    marginTop: 6
+    marginTop: -2
   },
   price: {
     fontSize: 14,
-    marginTop: 9
+    marginTop: 11
   },
 
 // MODAL CONTENT CONTAINER
@@ -224,7 +361,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'flex-start',
+    alignItems: 'center'
   },
 
 // MODALS
@@ -232,8 +369,10 @@ const styles = StyleSheet.create({
   sancerreModal: {
     marginTop: 350,
     marginBottom: 400,
-    width: 600,
-    backgroundColor: 'rgba(9, 9, 9, .7)'
+    width: 740,
+    backgroundColor: 'rgba(255, 255, 255, .9)',
+    borderRadius: 10,
+    borderWidth: 1
   },
   petitChablisModal: {
     marginTop: 200,
@@ -242,11 +381,65 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(9, 9, 9, .7)'
   },
   modalTitle: {
-    color: 'white',
-    fontSize: 40
+    color: 'black',
+    fontSize: 40,
+    marginLeft: 20
   },
   closeModalText: {
-    color: 'white',
-    fontSize: 20
-  }
+    color: 'black',
+    fontSize: 20,
+    marginTop: 40,
+    marginLeft: 22
+  },
+
+// MODAL CONTENT BOXES
+  modalContents: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+  },
+
+  blend: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    margin: 10,
+    padding: 5,
+    height: '48%',
+    width: '45%',
+    backgroundColor: 'blue'
+  },
+  flavor: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    margin: 10,
+    padding: 5,
+    height: '48%',
+    width: '45%',
+    backgroundColor: 'pink'
+  },
+  pairing: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    margin: 10,
+    padding: 5,
+    height: '48%',
+    width: '45%',
+    backgroundColor: 'yellow'
+  },
+  funFact: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    margin: 10,
+    padding: 5,
+    height: '48%',
+    width: '45%',
+    backgroundColor: 'brown'
+  },
+
 })
