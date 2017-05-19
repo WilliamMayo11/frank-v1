@@ -11,7 +11,7 @@ export default class WhiteByTheGlass extends React.Component {
   showSancerreModal(visible) {
     this.setState({sancerreVisible: visible});
     // setTimeout(() => {
-    //   hideSancerreModal(), 200});
+    // this.hideSancerreModal(), 800});
   }
 
   // hideSancerreModal() {
