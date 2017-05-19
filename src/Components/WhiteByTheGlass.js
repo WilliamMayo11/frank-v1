@@ -180,20 +180,20 @@ export default class WhiteByTheGlass extends React.Component {
                   maximumZoomScale={1.5}
                 >
                   <View>
-                    <Text style={styles.modalTitle}>Sancerre</Text>
+                    <Text style={styles.modalTitle}>St Veran</Text>
 
                     <View style={styles.modalContents}>
                       <View style={styles.blend}>
-                        <Text>100% Sauvignon Blanc</Text>
+                        <Text> 100% Chardonnay aged in new and old oak barrels.</Text>
                       </View>
                       <View style={styles.funFact}>
-                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                        <Text>St. Veran is named for Veranus of Cavaillon, a 6th Century bishop and dragon-slayer!</Text>
                       </View>
                       <View style={styles.flavor}>
-                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                        <Text>Medium-bodied. Dry. Aromas & flavors of yellow apples, corn on the cob & meyer lemon, with floral notes and bright acidity. Strong finish.</Text>
                       </View>
                       <View style={styles.pairing}>
-                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                        <Text>Pairs well with salads, seafood, and white meat dishes, light pastas and grain dishes.</Text>
                       </View>
                     </View>
 
@@ -214,15 +214,16 @@ export default class WhiteByTheGlass extends React.Component {
               }}
             >
               <View>
-                <Text style={styles.type}>SANCERRE</Text>
+                <Text style={styles.type}>ST VERAN</Text>
                   <View style={styles.itemFlex}>
-                    <Text style={styles.code}>3314</Text>
-                    <Text style={styles.brand}>R&D RAIMBAULT</Text>
-                    <Text style={styles.year}>'15</Text>
+                    <Text style={styles.code}>3512</Text>
+                    <Text style={styles.quote}>"LES CRAS"</Text>
+                    <Text style={styles.brand}>DOMAINE DES VALANGES</Text>
+                    <Text style={styles.year}>'14</Text>
                   </View>
               </View>
             </TouchableHighlight>
-            <Text style={styles.price}>16</Text>
+            <Text style={styles.price}>14</Text>
           </View>
 
 
@@ -337,8 +338,9 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   quote: {
-    fontSize: 10,
-    marginLeft: 5
+    fontSize: 12,
+    marginLeft: 5,
+    marginTop: -2
   },
   brand: {
     fontSize: 12,
@@ -409,7 +411,7 @@ const styles = StyleSheet.create({
     padding: 5,
     height: '48%',
     width: '45%',
-    backgroundColor: 'blue'
+    backgroundColor: '#FDD900'
   },
   flavor: {
     alignItems: 'center',
@@ -419,7 +421,7 @@ const styles = StyleSheet.create({
     padding: 5,
     height: '48%',
     width: '45%',
-    backgroundColor: 'pink'
+    backgroundColor: '#C7DFB6'
   },
   pairing: {
     alignItems: 'center',
@@ -429,7 +431,7 @@ const styles = StyleSheet.create({
     padding: 5,
     height: '48%',
     width: '45%',
-    backgroundColor: 'yellow'
+    backgroundColor: 'pink'
   },
   funFact: {
     alignItems: 'center',
@@ -439,7 +441,7 @@ const styles = StyleSheet.create({
     padding: 5,
     height: '48%',
     width: '45%',
-    backgroundColor: 'brown'
+    backgroundColor: '#DDEBF6'
   },
 
 })
