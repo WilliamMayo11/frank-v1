@@ -10,7 +10,15 @@ export default class WhiteByTheGlass extends React.Component {
 
   showSancerreModal(visible) {
     this.setState({sancerreVisible: visible});
+    // setTimeout(() => {
+    //   hideSancerreModal(), 200});
   }
+
+  // hideSancerreModal() {
+  //   this.setState({
+  //     sancerreVisible: false
+  //   })
+  // }
 
   showPetitChablisModal(visible) {
     this.setState({petitChablisVisible: visible});
@@ -39,7 +47,7 @@ export default class WhiteByTheGlass extends React.Component {
               visible={this.state.sancerreVisible}
               onRequestClose={() => {alert("Modal has been closed.")}}
               >
-              <View style={styles.contentContainer}>
+              <View style={styles.ModalContentContainer}>
                 <ScrollView
                   style={styles.sancerreModal}
                   minimumZoomScale={1}
@@ -180,6 +188,9 @@ const styles = StyleSheet.create({
     fontFamily: 'SnellRoundhand-Bold',
     fontSize: 40
   },
+
+// WINE INFO
+
   code: {
     fontSize: 10,
     marginTop: 7
@@ -206,15 +217,21 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 9
   },
-  contentContainer: {
+
+// MODAL CONTENT CONTAINER
+
+  ModalContentContainer: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
   },
+
+// MODALS
+
   sancerreModal: {
-    marginTop: 200,
-    marginBottom: 600,
+    marginTop: 350,
+    marginBottom: 400,
     width: 600,
     backgroundColor: 'rgba(9, 9, 9, .7)'
   },

@@ -32,7 +32,7 @@ export default class App extends React.Component {
               <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 1}}/>
             </View>
 
-            <Text style={styles.byTheGlassText}>By The Glass</Text>
+            <Text style={styles.byTheGlassText}>BY THE GLASS</Text>
 
             <View style={styles.line}>
               <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 1}}/>
