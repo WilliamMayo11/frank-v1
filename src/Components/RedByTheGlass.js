@@ -7,7 +7,7 @@ export default class RedByTheGlass extends React.Component {
       <View>
 
         <View style={styles.columnTitle}>
-          <Text style={styles.titleText}>Red</Text>
+          <Text style={styles.titleText}>  Red  </Text>
         </View>
 
         <View style={styles.itemListFlex}>

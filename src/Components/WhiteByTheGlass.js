@@ -6,7 +6,10 @@ export default class WhiteByTheGlass extends React.Component {
   state = {
     sancerreVisible: false,
     petitChablisVisible: false,
+    stVeranVisible: false,
   }
+
+
 
   showSancerreModal(visible) {
     this.setState({sancerreVisible: visible});
@@ -22,6 +25,10 @@ export default class WhiteByTheGlass extends React.Component {
 
   showPetitChablisModal(visible) {
     this.setState({petitChablisVisible: visible});
+  }
+
+  showStVeranModal(visible) {
+    this.setState({stVeranVisible: visible});
   }
 
   render() {
@@ -80,6 +87,9 @@ export default class WhiteByTheGlass extends React.Component {
               onPress={() => {
                 this.showSancerreModal(true)
               }}
+              activeOpacity={.2}
+              underlayColor={'#5B7E90'}
+              style={styles.touchableStyle}
             >
               <View>
                 <Text style={styles.type}>SANCERRE</Text>
@@ -108,7 +118,7 @@ export default class WhiteByTheGlass extends React.Component {
               >
               <View style={styles.ModalContentContainer}>
                 <ScrollView
-                  style={styles.sancerreModal}
+                  style={styles.petitChablisModal}
                   minimumZoomScale={1}
                   maximumZoomScale={1.5}
                 >
@@ -170,12 +180,12 @@ export default class WhiteByTheGlass extends React.Component {
             <Modal
               animationType={"fade"}
               transparent={true}
-              visible={this.state.sancerreVisible}
+              visible={this.state.stVeranVisible}
               onRequestClose={() => {alert("Modal has been closed.")}}
               >
               <View style={styles.ModalContentContainer}>
                 <ScrollView
-                  style={styles.sancerreModal}
+                  style={styles.stVeranModal}
                   minimumZoomScale={1}
                   maximumZoomScale={1.5}
                 >
@@ -198,7 +208,7 @@ export default class WhiteByTheGlass extends React.Component {
                     </View>
 
                     <TouchableHighlight onPress={() => {
-                      this.showSancerreModal(!this.state.sancerreVisible)
+                      this.showStVeranModal(!this.state.stVeranVisible)
                     }}>
                       <Text style={styles.closeModalText}>Got it!</Text>
                     </TouchableHighlight>
@@ -210,7 +220,7 @@ export default class WhiteByTheGlass extends React.Component {
 
             <TouchableHighlight
               onPress={() => {
-                this.showSancerreModal(true)
+                this.showStVeranModal(true)
               }}
             >
               <View>
@@ -363,7 +373,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 
 // MODALS
@@ -377,10 +387,22 @@ const styles = StyleSheet.create({
     borderWidth: 1
   },
   petitChablisModal: {
-    marginTop: 200,
-    height: 100,
-    width: 400,
-    backgroundColor: 'rgba(9, 9, 9, .7)'
+    marginTop: 405,
+    marginBottom: 360,
+    padding: 10,
+    width: 740,
+    backgroundColor: 'rgba(255, 255, 255, .9)',
+    borderRadius: 10,
+    borderWidth: 1
+  },
+  stVeranModal: {
+    marginTop: 460,
+    marginBottom: 285,
+    padding: 10,
+    width: 740,
+    backgroundColor: 'rgba(255, 255, 255, .9)',
+    borderRadius: 10,
+    borderWidth: 1
   },
   modalTitle: {
     color: 'black',
@@ -442,6 +464,12 @@ const styles = StyleSheet.create({
     height: '48%',
     width: '45%',
     backgroundColor: '#DDEBF6'
+  },
+
+// TOUCHABLE HIGHLIGHTS
+
+  touchableStyle: {
+    borderRadius: 10
   },
 
 })
