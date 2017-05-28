@@ -33,6 +33,7 @@ export default class WhiteByTheGlass extends React.Component {
 
   render() {
     return (
+
       <View>
 
         <View style={styles.columnTitle}>
@@ -43,7 +44,7 @@ export default class WhiteByTheGlass extends React.Component {
 
           <View style={styles.itemFlexOuter}>
             <Modal
-              animationType={"fade"}
+              animationType={"slide"}
               transparent={true}
               visible={this.state.sancerreVisible}
               onRequestClose={() => {alert("Modal has been closed.")}}
@@ -92,15 +93,16 @@ export default class WhiteByTheGlass extends React.Component {
               style={styles.touchableStyle}
             >
               <View>
+              <View style={styles.itemFlex}>
                 <Text style={styles.type}>SANCERRE</Text>
-                  <View style={styles.itemFlex}>
-                    <Text style={styles.code}>3314</Text>
-                    <Text style={styles.brand}>R&D RAIMBAULT</Text>
-                    <Text style={styles.year}>'15</Text>
+                <Text style={styles.quote}>"Apud Sariacum"</Text>
+                <Text style={styles.brand}>Phillipe Raimbault</Text>
+                <Text style={styles.region}>Loire, FRANCE</Text>
+                <Text style={styles.year}>'14</Text>
                   </View>
               </View>
             </TouchableHighlight>
-            <Text style={styles.price}>16</Text>
+            <Text style={styles.price}>15</Text>
           </View>
 
 
@@ -111,37 +113,37 @@ export default class WhiteByTheGlass extends React.Component {
 
           <View style={styles.itemFlexOuter}>
             <Modal
-              animationType={"fade"}
+              animationType={"slide"}
               transparent={true}
-              visible={this.state.petitChablisVisible}
+              visible={this.state.PetitChablisVisible}
               onRequestClose={() => {alert("Modal has been closed.")}}
               >
               <View style={styles.ModalContentContainer}>
                 <ScrollView
-                  style={styles.petitChablisModal}
+                  style={styles.PetitChablisModal}
                   minimumZoomScale={1}
                   maximumZoomScale={1.5}
                 >
                   <View>
-                    <Text style={styles.modalTitle}>PETIT CHABLIS</Text>
+                    <Text style={styles.modalTitle}>PetitChablis</Text>
 
                     <View style={styles.modalContents}>
                       <View style={styles.blend}>
-                        <Text>100% Chardonnay</Text>
+                        <Text>100% Sauvignon Blanc</Text>
                       </View>
                       <View style={styles.funFact}>
-                        <Text>Vinified without oak.</Text>
+                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
                       </View>
                       <View style={styles.flavor}>
-                        <Text>Dry. Light/medium-bodied. Crisp acidity, bright minerality, ripe citrus & green apple fruit flavors.</Text>
+                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
                       </View>
                       <View style={styles.pairing}>
-                        <Text>Pairs well with all seafood, especially oysters.</Text>
+                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
                       </View>
                     </View>
 
                     <TouchableHighlight onPress={() => {
-                      this.showPetitChablisModal(!this.state.petitChablisVisible)
+                      this.showPetitChablisModal(!this.state.PetitChablisVisible)
                     }}>
                       <Text style={styles.closeModalText}>Got it!</Text>
                     </TouchableHighlight>
@@ -155,13 +157,16 @@ export default class WhiteByTheGlass extends React.Component {
               onPress={() => {
                 this.showPetitChablisModal(true)
               }}
+              activeOpacity={.2}
+              underlayColor={'#5B7E90'}
+              style={styles.touchableStyle}
             >
               <View>
+              <View style={styles.itemFlex}>
                 <Text style={styles.type}>PETIT CHABLIS</Text>
-                  <View style={styles.itemFlex}>
-                    <Text style={styles.code}>3631</Text>
-                    <Text style={styles.brand}>C&L PINSON</Text>
-                    <Text style={styles.year}>'15</Text>
+                <Text style={styles.brand}>Domaine Vincent Dampt</Text>
+                <Text style={styles.region}>Burgundy, FRANCE</Text>
+                <Text style={styles.year}>'14</Text>
                   </View>
               </View>
             </TouchableHighlight>
@@ -178,74 +183,7 @@ export default class WhiteByTheGlass extends React.Component {
 
           <View style={styles.itemFlexOuter}>
             <Modal
-              animationType={"fade"}
-              transparent={true}
-              visible={this.state.stVeranVisible}
-              onRequestClose={() => {alert("Modal has been closed.")}}
-              >
-              <View style={styles.ModalContentContainer}>
-                <ScrollView
-                  style={styles.stVeranModal}
-                  minimumZoomScale={1}
-                  maximumZoomScale={1.5}
-                >
-                  <View>
-                    <Text style={styles.modalTitle}>St Veran</Text>
-
-                    <View style={styles.modalContents}>
-                      <View style={styles.blend}>
-                        <Text> 100% Chardonnay aged in new and old oak barrels.</Text>
-                      </View>
-                      <View style={styles.funFact}>
-                        <Text>St. Veran is named for Veranus of Cavaillon, a 6th Century bishop and dragon-slayer!</Text>
-                      </View>
-                      <View style={styles.flavor}>
-                        <Text>Medium-bodied. Dry. Aromas & flavors of yellow apples, corn on the cob & meyer lemon, with floral notes and bright acidity. Strong finish.</Text>
-                      </View>
-                      <View style={styles.pairing}>
-                        <Text>Pairs well with salads, seafood, and white meat dishes, light pastas and grain dishes.</Text>
-                      </View>
-                    </View>
-
-                    <TouchableHighlight onPress={() => {
-                      this.showStVeranModal(!this.state.stVeranVisible)
-                    }}>
-                      <Text style={styles.closeModalText}>Got it!</Text>
-                    </TouchableHighlight>
-
-                  </View>
-                </ScrollView>
-              </View>
-            </Modal>
-
-            <TouchableHighlight
-              onPress={() => {
-                this.showStVeranModal(true)
-              }}
-            >
-              <View>
-                <Text style={styles.type}>ST VERAN</Text>
-                  <View style={styles.itemFlex}>
-                    <Text style={styles.code}>3512</Text>
-                    <Text style={styles.quote}>"LES CRAS"</Text>
-                    <Text style={styles.brand}>DOMAINE DES VALANGES</Text>
-                    <Text style={styles.year}>'14</Text>
-                  </View>
-              </View>
-            </TouchableHighlight>
-            <Text style={styles.price}>14</Text>
-          </View>
-
-
-
-
-
-
-
-
-          <View style={styles.itemFlexOuter}>
-            <Modal
-              animationType={"fade"}
+              animationType={"slide"}
               transparent={true}
               visible={this.state.sancerreVisible}
               onRequestClose={() => {alert("Modal has been closed.")}}
@@ -289,13 +227,87 @@ export default class WhiteByTheGlass extends React.Component {
               onPress={() => {
                 this.showSancerreModal(true)
               }}
+              activeOpacity={.2}
+              underlayColor={'#5B7E90'}
+              style={styles.touchableStyle}
             >
               <View>
+              <View style={styles.itemFlex}>
                 <Text style={styles.type}>SANCERRE</Text>
-                  <View style={styles.itemFlex}>
-                    <Text style={styles.code}>3314</Text>
-                    <Text style={styles.brand}>R&D RAIMBAULT</Text>
-                    <Text style={styles.year}>'15</Text>
+                <Text style={styles.quote}>"Apud Sariacum"</Text>
+                <Text style={styles.brand}>Phillipe Raimbault</Text>
+                <Text style={styles.region}>Loire, FRANCE</Text>
+                <Text style={styles.year}>'14</Text>
+                  </View>
+              </View>
+            </TouchableHighlight>
+            <Text style={styles.price}>16</Text>
+          </View>
+
+
+
+
+
+
+
+
+<View style={styles.itemFlexOuter}>
+            <Modal
+              animationType={"slide"}
+              transparent={true}
+              visible={this.state.sancerreVisible}
+              onRequestClose={() => {alert("Modal has been closed.")}}
+              >
+              <View style={styles.ModalContentContainer}>
+                <ScrollView
+                  style={styles.sancerreModal}
+                  minimumZoomScale={1}
+                  maximumZoomScale={1.5}
+                >
+                  <View>
+                    <Text style={styles.modalTitle}>Sancerre</Text>
+
+                    <View style={styles.modalContents}>
+                      <View style={styles.blend}>
+                        <Text>100% Sauvignon Blanc</Text>
+                      </View>
+                      <View style={styles.funFact}>
+                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                      </View>
+                      <View style={styles.flavor}>
+                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                      </View>
+                      <View style={styles.pairing}>
+                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                      </View>
+                    </View>
+
+                    <TouchableHighlight onPress={() => {
+                      this.showSancerreModal(!this.state.sancerreVisible)
+                    }}>
+                      <Text style={styles.closeModalText}>Got it!</Text>
+                    </TouchableHighlight>
+
+                  </View>
+                </ScrollView>
+              </View>
+            </Modal>
+
+            <TouchableHighlight
+              onPress={() => {
+                this.showSancerreModal(true)
+              }}
+              activeOpacity={.2}
+              underlayColor={'#5B7E90'}
+              style={styles.touchableStyle}
+            >
+              <View>
+              <View style={styles.itemFlex}>
+                <Text style={styles.type}>SANCERRE</Text>
+                <Text style={styles.quote}>"Apud Sariacum"</Text>
+                <Text style={styles.brand}>Phillipe Raimbault</Text>
+                <Text style={styles.region}>Loire, FRANCE</Text>
+                <Text style={styles.year}>'14</Text>
                   </View>
               </View>
             </TouchableHighlight>
@@ -316,9 +328,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa'
   },
   itemFlexOuter: {
-    width: 340,
+    width: 500,
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    position: 'relative'
   },
   itemFlex: {
     flexDirection: 'row',
@@ -345,26 +358,32 @@ const styles = StyleSheet.create({
   type: {
     fontSize: 18,
     marginLeft: 12,
+    marginRight: 10,
     marginTop: 10
   },
   quote: {
     fontSize: 12,
     marginLeft: 5,
-    marginTop: -2
+    marginTop: 14.8
+  },
+  region: {
+    fontSize: 12,
+    marginLeft: 5,
+    marginTop: 14.8
   },
   brand: {
     fontSize: 12,
     marginLeft: 5,
-    marginTop: -2
+    marginTop: 14.8
   },
   year: {
     fontSize: 12,
     marginLeft: 5,
-    marginTop: -2
+    marginTop: 14.8
   },
   price: {
     fontSize: 14,
-    marginTop: 11
+    marginTop: 16
   },
 
 // MODAL CONTENT CONTAINER
@@ -374,6 +393,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'absolute'
   },
 
 // MODALS
@@ -384,7 +404,8 @@ const styles = StyleSheet.create({
     width: 740,
     backgroundColor: 'rgba(255, 255, 255, .9)',
     borderRadius: 10,
-    borderWidth: 1
+    borderWidth: 1,
+    position: 'relative'
   },
   petitChablisModal: {
     marginTop: 405,

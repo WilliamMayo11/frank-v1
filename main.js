@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import App from './src/App';
 
 class Main extends React.Component {
+
   render() {
     return (
       <ScrollView>

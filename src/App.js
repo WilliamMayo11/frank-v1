@@ -3,6 +3,7 @@ import { ScrollView, Text, View, StyleSheet } from 'react-native';
 
 import RedByTheGlass from './Components/RedByTheGlass';
 import WhiteByTheGlass from './Components/WhiteByTheGlass';
+import FadeInView from './Components/FadeInView';
 
 export default class App extends React.Component {
 
@@ -56,6 +57,39 @@ export default class App extends React.Component {
           </View>
         </View>
 
+        <View style={styles.menuColumns}>
+
+          <View style={styles.whiteColumn}>
+            <WhiteByTheGlass />
+          </View>
+
+          <View style={styles.redColumn}>
+            <RedByTheGlass />
+          </View>
+        </View>
+
+        <View style={styles.menuColumns}>
+
+          <View style={styles.whiteColumn}>
+            <WhiteByTheGlass />
+          </View>
+
+          <View style={styles.redColumn}>
+            <RedByTheGlass />
+          </View>
+        </View>
+
+        <View style={styles.menuColumns}>
+
+          <View style={styles.whiteColumn}>
+            <WhiteByTheGlass />
+          </View>
+
+          <View style={styles.redColumn}>
+            <RedByTheGlass />
+          </View>
+        </View>
+
       </ScrollView>
 
     )
@@ -71,7 +105,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa'
   },
   titleContainerOuter: {
-    marginTop: 20
+    marginTop: 30
   },
   titleContainer: {
     flexDirection: 'column',
@@ -95,7 +129,7 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   line: {
-    width: 280,
+    width: 410,
     padding: 20
   },
   menuColumns: {
@@ -105,10 +139,9 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   whiteColumn: {
-    marginLeft: 140
+    marginLeft: -170
   },
   redColumn: {
-    marginLeft: 40,
-    marginRight: 160
+    marginRight: 2
   }
 })
