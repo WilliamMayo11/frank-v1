@@ -57,39 +57,6 @@ export default class App extends React.Component {
           </View>
         </View>
 
-        <View style={styles.menuColumns}>
-
-          <View style={styles.whiteColumn}>
-            <WhiteByTheGlass />
-          </View>
-
-          <View style={styles.redColumn}>
-            <RedByTheGlass />
-          </View>
-        </View>
-
-        <View style={styles.menuColumns}>
-
-          <View style={styles.whiteColumn}>
-            <WhiteByTheGlass />
-          </View>
-
-          <View style={styles.redColumn}>
-            <RedByTheGlass />
-          </View>
-        </View>
-
-        <View style={styles.menuColumns}>
-
-          <View style={styles.whiteColumn}>
-            <WhiteByTheGlass />
-          </View>
-
-          <View style={styles.redColumn}>
-            <RedByTheGlass />
-          </View>
-        </View>
-
       </ScrollView>
 
     )
@@ -121,7 +88,7 @@ const styles = StyleSheet.create({
   },
   byTheGlassContainer: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center'
   },
   byTheGlassText: {
@@ -139,9 +106,9 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   whiteColumn: {
-    marginLeft: -170
+    marginRight: 50
   },
   redColumn: {
-    marginRight: 2
+    marginRight: 30
   }
 })

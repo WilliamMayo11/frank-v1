@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableHighlight, Modal, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableHighlight, Modal, ScrollView, TouchableWithoutFeedback } from 'react-native';
 
 export default class WhiteByTheGlass extends React.Component {
 
@@ -44,52 +44,47 @@ export default class WhiteByTheGlass extends React.Component {
 
           <View style={styles.itemFlexOuter}>
             <Modal
-              animationType={"slide"}
+              animationType={"fade"}
               transparent={true}
               visible={this.state.sancerreVisible}
               onRequestClose={() => {alert("Modal has been closed.")}}
               >
-              <View style={styles.ModalContentContainer}>
-                <ScrollView
-                  style={styles.sancerreModal}
-                  minimumZoomScale={1}
-                  maximumZoomScale={1.5}
-                >
-                  <View>
-                    <Text style={styles.modalTitle}>Sancerre</Text>
+              <TouchableWithoutFeedback onPress={() => this.showSancerreModal(!this.state.sancerreVisible)}>
+                <View style={styles.ModalContentContainer}>
+                  <ScrollView
+                    style={styles.sancerreModal}
+                    minimumZoomScale={1}
+                    maximumZoomScale={1.5}
+                  >
+                    <View>
 
-                    <View style={styles.modalContents}>
-                      <View style={styles.blend}>
-                        <Text>100% Sauvignon Blanc</Text>
+                      <View style={styles.modalContents}>
+                        <View style={styles.blend}>
+                          <Text style={styles.modalContentText}>100% Sauvignon Blanc</Text>
+                        </View>
+                        <View style={styles.funFact}>
+                          <Text style={styles.modalContentText}>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                        </View>
+                        <View style={styles.pairing}>
+                          <Text style={styles.modalContentText}>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                        </View>
+                        <View style={styles.flavor}>
+                          <Text style={styles.modalContentText}>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                        </View>
                       </View>
-                      <View style={styles.funFact}>
-                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
-                      </View>
-                      <View style={styles.flavor}>
-                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
-                      </View>
-                      <View style={styles.pairing}>
-                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
-                      </View>
+
                     </View>
-
-                    <TouchableHighlight onPress={() => {
-                      this.showSancerreModal(!this.state.sancerreVisible)
-                    }}>
-                      <Text style={styles.closeModalText}>Got it!</Text>
-                    </TouchableHighlight>
-
-                  </View>
-                </ScrollView>
-              </View>
+                  </ScrollView>
+                </View>
+              </TouchableWithoutFeedback>
             </Modal>
 
             <TouchableHighlight
               onPress={() => {
                 this.showSancerreModal(true)
               }}
-              activeOpacity={.2}
-              underlayColor={'#5B7E90'}
+              activeOpacity={10}
+              underlayColor={'white'}
               style={styles.touchableStyle}
             >
               <View>
@@ -113,19 +108,19 @@ export default class WhiteByTheGlass extends React.Component {
 
           <View style={styles.itemFlexOuter}>
             <Modal
-              animationType={"slide"}
+              animationType={"fade"}
               transparent={true}
-              visible={this.state.PetitChablisVisible}
+              visible={this.state.petitChablisVisible}
               onRequestClose={() => {alert("Modal has been closed.")}}
               >
               <View style={styles.ModalContentContainer}>
                 <ScrollView
-                  style={styles.PetitChablisModal}
+                  style={styles.petitChablisModal}
                   minimumZoomScale={1}
                   maximumZoomScale={1.5}
                 >
                   <View>
-                    <Text style={styles.modalTitle}>PetitChablis</Text>
+                    <Text style={styles.modalTitle}>Petit Chablis</Text>
 
                     <View style={styles.modalContents}>
                       <View style={styles.blend}>
@@ -143,7 +138,7 @@ export default class WhiteByTheGlass extends React.Component {
                     </View>
 
                     <TouchableHighlight onPress={() => {
-                      this.showPetitChablisModal(!this.state.PetitChablisVisible)
+                      this.showPetitChablisModal(!this.state.petitChablisVisible)
                     }}>
                       <Text style={styles.closeModalText}>Got it!</Text>
                     </TouchableHighlight>
@@ -174,146 +169,6 @@ export default class WhiteByTheGlass extends React.Component {
           </View>
 
 
-
-
-
-
-
-
-
-          <View style={styles.itemFlexOuter}>
-            <Modal
-              animationType={"slide"}
-              transparent={true}
-              visible={this.state.sancerreVisible}
-              onRequestClose={() => {alert("Modal has been closed.")}}
-              >
-              <View style={styles.ModalContentContainer}>
-                <ScrollView
-                  style={styles.sancerreModal}
-                  minimumZoomScale={1}
-                  maximumZoomScale={1.5}
-                >
-                  <View>
-                    <Text style={styles.modalTitle}>Sancerre</Text>
-
-                    <View style={styles.modalContents}>
-                      <View style={styles.blend}>
-                        <Text>100% Sauvignon Blanc</Text>
-                      </View>
-                      <View style={styles.funFact}>
-                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
-                      </View>
-                      <View style={styles.flavor}>
-                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
-                      </View>
-                      <View style={styles.pairing}>
-                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
-                      </View>
-                    </View>
-
-                    <TouchableHighlight onPress={() => {
-                      this.showSancerreModal(!this.state.sancerreVisible)
-                    }}>
-                      <Text style={styles.closeModalText}>Got it!</Text>
-                    </TouchableHighlight>
-
-                  </View>
-                </ScrollView>
-              </View>
-            </Modal>
-
-            <TouchableHighlight
-              onPress={() => {
-                this.showSancerreModal(true)
-              }}
-              activeOpacity={.2}
-              underlayColor={'#5B7E90'}
-              style={styles.touchableStyle}
-            >
-              <View>
-              <View style={styles.itemFlex}>
-                <Text style={styles.type}>SANCERRE</Text>
-                <Text style={styles.quote}>"Apud Sariacum"</Text>
-                <Text style={styles.brand}>Phillipe Raimbault</Text>
-                <Text style={styles.region}>Loire, FRANCE</Text>
-                <Text style={styles.year}>'14</Text>
-                  </View>
-              </View>
-            </TouchableHighlight>
-            <Text style={styles.price}>16</Text>
-          </View>
-
-
-
-
-
-
-
-
-<View style={styles.itemFlexOuter}>
-            <Modal
-              animationType={"slide"}
-              transparent={true}
-              visible={this.state.sancerreVisible}
-              onRequestClose={() => {alert("Modal has been closed.")}}
-              >
-              <View style={styles.ModalContentContainer}>
-                <ScrollView
-                  style={styles.sancerreModal}
-                  minimumZoomScale={1}
-                  maximumZoomScale={1.5}
-                >
-                  <View>
-                    <Text style={styles.modalTitle}>Sancerre</Text>
-
-                    <View style={styles.modalContents}>
-                      <View style={styles.blend}>
-                        <Text>100% Sauvignon Blanc</Text>
-                      </View>
-                      <View style={styles.funFact}>
-                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
-                      </View>
-                      <View style={styles.flavor}>
-                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
-                      </View>
-                      <View style={styles.pairing}>
-                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
-                      </View>
-                    </View>
-
-                    <TouchableHighlight onPress={() => {
-                      this.showSancerreModal(!this.state.sancerreVisible)
-                    }}>
-                      <Text style={styles.closeModalText}>Got it!</Text>
-                    </TouchableHighlight>
-
-                  </View>
-                </ScrollView>
-              </View>
-            </Modal>
-
-            <TouchableHighlight
-              onPress={() => {
-                this.showSancerreModal(true)
-              }}
-              activeOpacity={.2}
-              underlayColor={'#5B7E90'}
-              style={styles.touchableStyle}
-            >
-              <View>
-              <View style={styles.itemFlex}>
-                <Text style={styles.type}>SANCERRE</Text>
-                <Text style={styles.quote}>"Apud Sariacum"</Text>
-                <Text style={styles.brand}>Phillipe Raimbault</Text>
-                <Text style={styles.region}>Loire, FRANCE</Text>
-                <Text style={styles.year}>'14</Text>
-                  </View>
-              </View>
-            </TouchableHighlight>
-            <Text style={styles.price}>16</Text>
-          </View>
-
         </View>
       </View>
     );
@@ -328,7 +183,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa'
   },
   itemFlexOuter: {
-    width: 500,
+    width: 475,
     flexDirection: 'row',
     justifyContent: 'space-between',
     position: 'relative'
@@ -399,12 +254,11 @@ const styles = StyleSheet.create({
 // MODALS
 
   sancerreModal: {
-    marginTop: 350,
-    marginBottom: 400,
-    width: 740,
+    marginTop: 342,
+    width: 575,
     backgroundColor: 'rgba(255, 255, 255, .9)',
-    borderRadius: 10,
-    borderWidth: 1,
+    // borderRadius: 10,
+    // borderWidth: 1,
     position: 'relative'
   },
   petitChablisModal: {
@@ -432,7 +286,7 @@ const styles = StyleSheet.create({
   },
   closeModalText: {
     color: 'black',
-    fontSize: 20,
+    fontSize: 15,
     marginTop: 40,
     marginLeft: 22
   },
@@ -441,50 +295,50 @@ const styles = StyleSheet.create({
   modalContents: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     flexWrap: 'wrap',
+    marginLeft: 3,
   },
 
   blend: {
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 5,
-    margin: 10,
-    padding: 5,
-    height: '48%',
-    width: '45%',
+    // margin: 10,
+    // padding: 5,
+
     backgroundColor: '#FDD900'
   },
   flavor: {
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 5,
-    margin: 10,
-    padding: 5,
-    height: '48%',
-    width: '45%',
+    // margin: 10,
+    // padding: 5,
+
     backgroundColor: '#C7DFB6'
   },
   pairing: {
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 5,
-    margin: 10,
-    padding: 5,
-    height: '48%',
-    width: '45%',
+    // margin: 10,
+    // padding: 5,
+
     backgroundColor: 'pink'
   },
   funFact: {
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 5,
-    margin: 10,
-    padding: 5,
-    height: '48%',
-    width: '45%',
+    // margin: 10,
+    // padding: 5,
+
     backgroundColor: '#DDEBF6'
+  },
+  modalContentText: {
+    fontSize: 7,
   },
 
 // TOUCHABLE HIGHLIGHTS
