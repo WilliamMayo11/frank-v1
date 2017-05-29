@@ -6,7 +6,7 @@ export default class WhiteByTheGlass extends React.Component {
   state = {
     sancerreVisible: false,
     petitChablisVisible: false,
-    stVeranVisible: false,
+    pinotBlancVisible: false,
   }
 
 
@@ -27,8 +27,8 @@ export default class WhiteByTheGlass extends React.Component {
     this.setState({petitChablisVisible: visible});
   }
 
-  showStVeranModal(visible) {
-    this.setState({stVeranVisible: visible});
+  showPinotBlancModal(visible) {
+    this.setState({pinotBlancVisible: visible});
   }
 
   render() {
@@ -113,39 +113,34 @@ export default class WhiteByTheGlass extends React.Component {
               visible={this.state.petitChablisVisible}
               onRequestClose={() => {alert("Modal has been closed.")}}
               >
-              <View style={styles.ModalContentContainer}>
-                <ScrollView
-                  style={styles.petitChablisModal}
-                  minimumZoomScale={1}
-                  maximumZoomScale={1.5}
-                >
-                  <View>
-                    <Text style={styles.modalTitle}>Petit Chablis</Text>
+              <TouchableWithoutFeedback onPress={() => this.showPetitChablisModal(!this.state.petitChablisVisible)}>
+                <View style={styles.ModalContentContainer}>
+                  <ScrollView
+                    style={styles.petitChablisModal}
+                    minimumZoomScale={1}
+                    maximumZoomScale={1.5}
+                  >
+                    <View>
 
-                    <View style={styles.modalContents}>
-                      <View style={styles.blend}>
-                        <Text>100% Sauvignon Blanc</Text>
+                      <View style={styles.modalContents}>
+                        <View style={styles.blend}>
+                          <Text>100% Sauvignon Blanc</Text>
+                        </View>
+                        <View style={styles.funFact}>
+                          <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                        </View>
+                        <View style={styles.flavor}>
+                          <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                        </View>
+                        <View style={styles.pairing}>
+                          <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                        </View>
                       </View>
-                      <View style={styles.funFact}>
-                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
-                      </View>
-                      <View style={styles.flavor}>
-                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
-                      </View>
-                      <View style={styles.pairing}>
-                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
-                      </View>
+
                     </View>
-
-                    <TouchableHighlight onPress={() => {
-                      this.showPetitChablisModal(!this.state.petitChablisVisible)
-                    }}>
-                      <Text style={styles.closeModalText}>Got it!</Text>
-                    </TouchableHighlight>
-
-                  </View>
-                </ScrollView>
-              </View>
+                  </ScrollView>
+                </View>
+              </TouchableWithoutFeedback>
             </Modal>
 
             <TouchableHighlight
@@ -166,6 +161,138 @@ export default class WhiteByTheGlass extends React.Component {
               </View>
             </TouchableHighlight>
             <Text style={styles.price}>13</Text>
+          </View>
+
+
+
+
+
+          <View style={styles.itemFlexOuter}>
+            <Modal
+              animationType={"fade"}
+              transparent={true}
+              visible={this.state.pinotBlancVisible}
+              onRequestClose={() => {alert("Modal has been closed.")}}
+              >
+              <View style={styles.ModalContentContainerPopOut}>
+                <ScrollView
+                  style={styles.pinotBlancModal}
+                  minimumZoomScale={1}
+                  maximumZoomScale={1.5}
+                >
+                  <View>
+                    <Text style={styles.modalTitle}>Pinot Blanc</Text>
+
+                    <View style={styles.modalContentsPopOut}>
+                      <View style={styles.blendPopOut}>
+                        <Text>100% Sauvignon Blanc</Text>
+                      </View>
+                      <View style={styles.funFactPopOut}>
+                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                      </View>
+                      <View style={styles.flavorPopOut}>
+                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                      </View>
+                      <View style={styles.pairingPopOut}>
+                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                      </View>
+                    </View>
+
+                    <TouchableHighlight onPress={() => {
+                      this.showPinotBlancModal(!this.state.pinotBlancVisible)
+                    }}>
+                      <Text style={styles.closeModalTextPopOut}>Got it!</Text>
+                    </TouchableHighlight>
+
+                  </View>
+                </ScrollView>
+              </View>
+            </Modal>
+
+            <TouchableHighlight
+              onPress={() => {
+                this.showPinotBlancModal(true)
+              }}
+              activeOpacity={10}
+              underlayColor={'white'}
+              style={styles.touchableStyle}
+            >
+              <View>
+              <View style={styles.itemFlex}>
+                <Text style={styles.type}>PINOT BLANC</Text>
+                <Text style={styles.quote}>"Cuvée Les Amours"</Text>
+                <Text style={styles.brand}>Famille Hugel</Text>
+                <Text style={styles.region}>Alsace, FRANCE</Text>
+                <Text style={styles.year}>'11</Text>
+                  </View>
+              </View>
+            </TouchableHighlight>
+            <Text style={styles.price}>11</Text>
+          </View>
+
+
+
+          <View style={styles.itemFlexOuter}>
+            <Modal
+              animationType={"fade"}
+              transparent={true}
+              visible={this.state.pinotBlancVisible}
+              onRequestClose={() => {alert("Modal has been closed.")}}
+              >
+              <View style={styles.ModalContentContainerPopOut}>
+                <ScrollView
+                  style={styles.pinotBlancModal}
+                  minimumZoomScale={1}
+                  maximumZoomScale={1.5}
+                >
+                  <View>
+                    <Text style={styles.modalTitle}>Pinot Blanc</Text>
+
+                    <View style={styles.modalContentsPopOut}>
+                      <View style={styles.blendPopOut}>
+                        <Text>100% Sauvignon Blanc</Text>
+                      </View>
+                      <View style={styles.funFactPopOut}>
+                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                      </View>
+                      <View style={styles.flavorPopOut}>
+                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                      </View>
+                      <View style={styles.pairingPopOut}>
+                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                      </View>
+                    </View>
+
+                    <TouchableHighlight onPress={() => {
+                      this.showPinotBlancModal(!this.state.pinotBlancVisible)
+                    }}>
+                      <Text style={styles.closeModalTextPopOut}>Got it!</Text>
+                    </TouchableHighlight>
+
+                  </View>
+                </ScrollView>
+              </View>
+            </Modal>
+
+            <TouchableHighlight
+              onPress={() => {
+                this.showPinotBlancModal(true)
+              }}
+              activeOpacity={10}
+              underlayColor={'white'}
+              style={styles.touchableStyle}
+            >
+              <View>
+              <View style={styles.itemFlex}>
+                <Text style={styles.type}>PINOT BLANC</Text>
+                <Text style={styles.quote}>"Cuvée Les Amours"</Text>
+                <Text style={styles.brand}>Famille Hugel</Text>
+                <Text style={styles.region}>Alsace, FRANCE</Text>
+                <Text style={styles.year}>'11</Text>
+                  </View>
+              </View>
+            </TouchableHighlight>
+            <Text style={styles.price}>11</Text>
           </View>
 
 
@@ -238,7 +365,7 @@ const styles = StyleSheet.create({
   },
   price: {
     fontSize: 14,
-    marginTop: 16
+    marginTop: 18
   },
 
 // MODAL CONTENT CONTAINER
@@ -249,6 +376,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute'
+  },
+  ModalContentContainerPopOut: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
 // MODALS
@@ -262,17 +395,17 @@ const styles = StyleSheet.create({
     position: 'relative'
   },
   petitChablisModal: {
-    marginTop: 405,
+    marginTop: 370,
     marginBottom: 360,
     padding: 10,
     width: 740,
     backgroundColor: 'rgba(255, 255, 255, .9)',
-    borderRadius: 10,
-    borderWidth: 1
+    // borderRadius: 10,
+    // borderWidth: 1
   },
-  stVeranModal: {
-    marginTop: 460,
-    marginBottom: 285,
+  pinotBlancModal: {
+    marginTop: 200,
+    marginBottom: 250,
     padding: 10,
     width: 740,
     backgroundColor: 'rgba(255, 255, 255, .9)',
@@ -287,6 +420,12 @@ const styles = StyleSheet.create({
   closeModalText: {
     color: 'black',
     fontSize: 15,
+    marginTop: 40,
+    marginLeft: 22
+  },
+  closeModalTextPopOut: {
+    color: 'black',
+    fontSize: 22,
     marginTop: 40,
     marginLeft: 22
   },
@@ -339,6 +478,55 @@ const styles = StyleSheet.create({
   },
   modalContentText: {
     fontSize: 7,
+  },
+  modalContentsPopOut: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    marginLeft: 3,
+  },
+
+  blendPopOut: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    margin: 10,
+    padding: 5,
+    height: '48%',
+    width: '45%',
+    backgroundColor: '#FDD900'
+  },
+  flavorPopOut: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    margin: 10,
+    padding: 5,
+    height: '48%',
+    width: '45%',
+    backgroundColor: '#C7DFB6'
+  },
+  pairingPopOut: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    margin: 10,
+    padding: 5,
+    height: '48%',
+    width: '45%',
+    backgroundColor: 'pink'
+  },
+  funFactPopOut: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    margin: 10,
+    padding: 5,
+    height: '48%',
+    width: '45%',
+    backgroundColor: '#DDEBF6'
   },
 
 // TOUCHABLE HIGHLIGHTS
