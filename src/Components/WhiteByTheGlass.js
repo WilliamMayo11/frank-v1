@@ -7,8 +7,8 @@ export default class WhiteByTheGlass extends React.Component {
     sancerreVisible: false,
     petitChablisVisible: false,
     pinotBlancVisible: false,
+    gravesBlancVisible: false,
   }
-
 
 
   showSancerreModal(visible) {
@@ -29,6 +29,10 @@ export default class WhiteByTheGlass extends React.Component {
 
   showPinotBlancModal(visible) {
     this.setState({pinotBlancVisible: visible});
+  }
+
+  showGravesBlancModal(visible) {
+    this.setState({gravesBlancVisible: visible});
   }
 
   render() {
@@ -124,16 +128,16 @@ export default class WhiteByTheGlass extends React.Component {
 
                       <View style={styles.modalContents}>
                         <View style={styles.blend}>
-                          <Text>100% Sauvignon Blanc</Text>
+                          <Text>100% Chardonnay</Text>
                         </View>
                         <View style={styles.funFact}>
-                          <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                          <Text>vinified without oak.</Text>
                         </View>
                         <View style={styles.flavor}>
-                          <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                          <Text>Dry. Light/medium-bodied. Crisp acidity, bright minerality, ripe citrus & green apple fruit flavors.</Text>
                         </View>
                         <View style={styles.pairing}>
-                          <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                          <Text>Pairs well with all seafood, especially oysters.</Text>
                         </View>
                       </View>
 
@@ -148,7 +152,7 @@ export default class WhiteByTheGlass extends React.Component {
                 this.showPetitChablisModal(true)
               }}
               activeOpacity={.2}
-              underlayColor={'#5B7E90'}
+              underlayColor={'white'}
               style={styles.touchableStyle}
             >
               <View>
@@ -185,22 +189,26 @@ export default class WhiteByTheGlass extends React.Component {
 
                     <View style={styles.modalContentsPopOut}>
                       <View style={styles.blendPopOut}>
-                        <Text>100% Sauvignon Blanc</Text>
+                        <Text>60% PInot Blanc, 40% Auxerrois.</Text>
                       </View>
                       <View style={styles.funFactPopOut}>
-                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                        <Text>The Hugel family owns and operates the world's oldest wine cask: the Sainte Caterine, 8,800 litres capacity, built in 1715.</Text>
                       </View>
                       <View style={styles.flavorPopOut}>
-                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                        <Text>Medium-bodied & dry with flavors of nectarine & white peach, and accents of stone and white pepper.</Text>
                       </View>
                       <View style={styles.pairingPopOut}>
-                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                        <Text>Great with salads & lighter fare.</Text>
                       </View>
                     </View>
 
-                    <TouchableHighlight onPress={() => {
-                      this.showPinotBlancModal(!this.state.pinotBlancVisible)
-                    }}>
+                    <TouchableHighlight
+                      onPress={() => {
+                        this.showPinotBlancModal(!this.state.pinotBlancVisible)
+                      }}
+                      activeOpacity={.2}
+                      underlayColor={'white'}
+                    >
                       <Text style={styles.closeModalTextPopOut}>Got it!</Text>
                     </TouchableHighlight>
 
@@ -236,36 +244,38 @@ export default class WhiteByTheGlass extends React.Component {
             <Modal
               animationType={"fade"}
               transparent={true}
-              visible={this.state.pinotBlancVisible}
+              visible={this.state.gravesBlancVisible}
               onRequestClose={() => {alert("Modal has been closed.")}}
               >
               <View style={styles.ModalContentContainerPopOut}>
                 <ScrollView
-                  style={styles.pinotBlancModal}
+                  style={styles.gravesBlancModal}
                   minimumZoomScale={1}
                   maximumZoomScale={1.5}
                 >
                   <View>
-                    <Text style={styles.modalTitle}>Pinot Blanc</Text>
+                    <Text style={styles.modalTitle}>Graves Blanc</Text>
 
                     <View style={styles.modalContentsPopOut}>
                       <View style={styles.blendPopOut}>
-                        <Text>100% Sauvignon Blanc</Text>
-                      </View>
-                      <View style={styles.funFactPopOut}>
-                        <Text>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                        <Text>45% Sauvignon Blanc, 45% Semillon, 10% Muscadelle</Text>
                       </View>
                       <View style={styles.flavorPopOut}>
-                        <Text>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                        <Text>Dry.  Aromas and flavors of white flowers, wet pebbles, citrus, and a touch of sea-brine minerality.</Text>
                       </View>
                       <View style={styles.pairingPopOut}>
-                        <Text>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                        <Text>Sumptous with seafood. Lovely with lighter white meats and pastas. Gorgeous with grain dishes.</Text>
                       </View>
                     </View>
 
-                    <TouchableHighlight onPress={() => {
-                      this.showPinotBlancModal(!this.state.pinotBlancVisible)
-                    }}>
+                    <TouchableHighlight
+                      onPress={() => {
+                        this.showGravesBlancModal(!this.state.gravesBlancVisible)
+                      }}
+                      activeOpacity={10}
+                      underlayColor={'white'}
+                      style={styles.touchableStyle}
+                    >
                       <Text style={styles.closeModalTextPopOut}>Got it!</Text>
                     </TouchableHighlight>
 
@@ -276,7 +286,7 @@ export default class WhiteByTheGlass extends React.Component {
 
             <TouchableHighlight
               onPress={() => {
-                this.showPinotBlancModal(true)
+                this.showGravesBlancModal(true)
               }}
               activeOpacity={10}
               underlayColor={'white'}
@@ -284,15 +294,14 @@ export default class WhiteByTheGlass extends React.Component {
             >
               <View>
               <View style={styles.itemFlex}>
-                <Text style={styles.type}>PINOT BLANC</Text>
-                <Text style={styles.quote}>"Cuvée Les Amours"</Text>
-                <Text style={styles.brand}>Famille Hugel</Text>
-                <Text style={styles.region}>Alsace, FRANCE</Text>
-                <Text style={styles.year}>'11</Text>
+                <Text style={styles.type}>GRAVES BLANC</Text>
+                <Text style={styles.brand}>Château Coustaut</Text>
+                <Text style={styles.region}>Bordeaux, FRANCE</Text>
+                <Text style={styles.year}>'14</Text>
                   </View>
               </View>
             </TouchableHighlight>
-            <Text style={styles.price}>11</Text>
+            <Text style={styles.price}>12</Text>
           </View>
 
 
@@ -327,7 +336,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontFamily: 'SnellRoundhand-Bold',
-    fontSize: 40
+    fontSize: 40,
   },
 
 // WINE INFO
@@ -404,6 +413,15 @@ const styles = StyleSheet.create({
     // borderWidth: 1
   },
   pinotBlancModal: {
+    marginTop: 200,
+    marginBottom: 250,
+    padding: 10,
+    width: 740,
+    backgroundColor: 'rgba(255, 255, 255, .9)',
+    borderRadius: 10,
+    borderWidth: 1
+  },
+  gravesBlancModal: {
     marginTop: 200,
     marginBottom: 250,
     padding: 10,

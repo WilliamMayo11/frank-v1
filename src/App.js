@@ -3,7 +3,7 @@ import { ScrollView, Text, View, StyleSheet } from 'react-native';
 
 import RedByTheGlass from './Components/RedByTheGlass';
 import WhiteByTheGlass from './Components/WhiteByTheGlass';
-import FadeInView from './Components/FadeInView';
+import HideView from './Components/HideView';
 
 export default class App extends React.Component {
 
@@ -56,6 +56,8 @@ export default class App extends React.Component {
             <RedByTheGlass />
           </View>
         </View>
+
+        <HideView />
 
       </ScrollView>
 
