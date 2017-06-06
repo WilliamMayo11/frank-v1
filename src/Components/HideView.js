@@ -26,7 +26,7 @@ export default class HideView extends React.Component {
                   hidden={this.state.hidden}
                   visible={this.state.visible}
                   noAnimation={false}
-                  duration={2000}
+                  duration={1000}
                   style={styles.toggleContent}
                   >
                     <TouchableWithoutFeedback
@@ -63,9 +63,12 @@ const styles = StyleSheet.create({
   itemFlex: {
     flexWrap: 'wrap',
     flexDirection: 'row',
-    margin: 5,
-    marginTop: 72,
-    width: 475
+    margin: 10,
+    marginTop: 7,
+    width: 475,
+    borderWidth: 1,
+    borderColor: 'black',
+    backgroundColor: 'teal'
   },
   hideView: {
     flex: 1,

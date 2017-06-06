@@ -7,7 +7,7 @@ export default class HideView2 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: true,
+            visible: false,
             noAnimation: true
         };
         this.toggle = this.toggle.bind(this);
@@ -21,7 +21,7 @@ export default class HideView2 extends React.Component {
 
     render() {
         return (
-            <View style={styles.hideView2}>
+            <View style={styles.hideView}>
                 <HideableView
                   hidden={this.state.hidden}
                   visible={this.state.visible}
@@ -33,7 +33,10 @@ export default class HideView2 extends React.Component {
                       onPress={this.toggle}
                     >
                       <View style={styles.itemFlex}>
-                          <Text>Sancerre</Text>
+                          <Text style={styles.textContent}>100% Sauvignon Blanc</Text>
+                          <Text style={styles.textContent}>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
+                          <Text style={styles.textContent}>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
+                          <Text style={styles.textContent}>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
                       </View>
                     </TouchableWithoutFeedback>
                 </HideableView>
@@ -58,13 +61,18 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   itemFlex: {
+    flexWrap: 'wrap',
     flexDirection: 'row',
-    justifyContent: 'space-between',
     margin: 5,
+    marginTop: 72,
     width: 475
   },
-  hideView2: {
+  hideView: {
     flex: 1,
-    position: 'relative',
-  }
+    position: 'absolute',
+  },
+  textContent: {
+    fontSize: 10,
+  },
+
 })

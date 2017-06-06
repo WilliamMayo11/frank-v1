@@ -93,12 +93,12 @@ export default class RedByTheGlass extends React.Component {
             >
               <View>
               <View style={styles.itemFlex}>
-                <Text style={styles.type}>SANCERRE</Text>
-                <Text style={styles.quote}>"Apud Sariacum"</Text>
-                <Text style={styles.brand}>Phillipe Raimbault</Text>
-                <Text style={styles.region}>Loire, FRANCE</Text>
-                <Text style={styles.year}>'14</Text>
-                  </View>
+                  <Text style={styles.type}>SANCERRE</Text>
+                  <Text style={styles.quote}>"Apud Sariacum"</Text>
+                  <Text style={styles.brand}>Phillipe Raimbault</Text>
+                  <Text style={styles.region}>Loire, FRANCE</Text>
+                  <Text style={styles.year}>'14</Text>
+                </View>
               </View>
             </TouchableHighlight>
             <Text style={styles.price}>15</Text>

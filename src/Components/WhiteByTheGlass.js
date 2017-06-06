@@ -48,14 +48,19 @@ export default class WhiteByTheGlass extends React.Component {
           <Text style={styles.titleText}>White</Text>
         </View>
       </View>
-
         <View style={styles.itemFlexOuter}>
+          <View style={styles.itemFlex}>
+              <Text style={styles.type}> SANCERRE</Text>
+              <Text style={styles.quote}>"Apud Sariacum"</Text>
+              <Text style={styles.brand}>Phillipe Raimbault</Text>
+              <Text style={styles.region}>Loire, FRANCE</Text>
+              <Text style={styles.year}>'14</Text>
+            <HideView />
+          </View>
           <View>
-            <Text style={styles.wineName}> SANCERRE</Text>
+            <Text style={styles.price}>15</Text>
           </View>
         </View>
-        <HideView />
-
       </View>
     );
   }
@@ -72,11 +77,45 @@ const styles = StyleSheet.create({
     fontFamily: 'SnellRoundhand-Bold',
     fontSize: 40,
   },
-  wineName: {
-    fontSize: 20
-  },
   itemFlexOuter: {
     width: 475,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    position: 'relative'
+  },
+  itemFlex: {
+    // width: 475,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    position: 'relative'
+  },
+  type: {
+    fontSize: 20,
+    margin: 5
+  },
+  quote: {
+    fontSize: 12,
+    marginLeft: 5,
+    marginTop: 14.8
+  },
+  region: {
+    fontSize: 12,
+    marginLeft: 5,
+    marginTop: 14.8
+  },
+  brand: {
+    fontSize: 12,
+    marginLeft: 5,
+    marginTop: 14.8
+  },
+  year: {
+    fontSize: 12,
+    marginLeft: 5,
+    marginTop: 14.8
+  },
+  price: {
+    fontSize: 14,
+    marginTop: 16
   },
 
 })
