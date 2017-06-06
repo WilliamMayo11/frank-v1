@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, TouchableWithoutFeedback, StyleSheet } fr
 
 import HideableView from 'react-native-hideable-view';
 
-export default class hideView extends React.Component {
+export default class PinotBlancHidden extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,10 +33,7 @@ export default class hideView extends React.Component {
                       onPress={this.toggle}
                     >
                       <View style={styles.itemFlex}>
-                          <Text style={styles.textContent}>100% Sauvignon Blanc. </Text>
-                          <Text style={styles.textContent}>Clay & silica-rich soil. Aged in stainless steel vats. </Text>
-                          <Text style={styles.textContent}>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry. </Text>
-                          <Text style={styles.textContent}>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish. </Text>
+                          <Text style={styles.textContent}>60% PInot Blanc, 40% Auxerrois. Great with salads & lighter fare. Medium-bodied & dry with flavors of nectarine & white peach, and accents of stone and white pepper. The Hugel family owns and operates the world's oldest wine cask: the Sainte Caterine, 8,800 litres capacity, built in 1715.</Text>
                       </View>
                     </TouchableWithoutFeedback>
                 </HideableView>

@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, TouchableWithoutFeedback, StyleSheet } fr
 
 import HideableView from 'react-native-hideable-view';
 
-export default class hideView extends React.Component {
+export default class PetitChablisHidden extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,10 +33,10 @@ export default class hideView extends React.Component {
                       onPress={this.toggle}
                     >
                       <View style={styles.itemFlex}>
-                          <Text style={styles.textContent}>100% Sauvignon Blanc. </Text>
-                          <Text style={styles.textContent}>Clay & silica-rich soil. Aged in stainless steel vats. </Text>
-                          <Text style={styles.textContent}>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry. </Text>
-                          <Text style={styles.textContent}>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish. </Text>
+                          <Text style={styles.textContent}>100% Chardonnay vinified without oak. </Text>
+                          <Text style={styles.textContent}>Dry. Light/medium-bodied. </Text>
+                          <Text style={styles.textContent}>Crisp acidity, bright minerality, ripe citrus & green apple fruit flavors. </Text>
+                          <Text style={styles.textContent}>Pairs well with all seafood, especially oysters. </Text>
                       </View>
                     </TouchableWithoutFeedback>
                 </HideableView>

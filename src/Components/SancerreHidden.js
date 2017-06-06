@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, TouchableWithoutFeedback, StyleSheet } fr
 
 import HideableView from 'react-native-hideable-view';
 
-export default class hideView extends React.Component {
+export default class SancerreHidden extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
