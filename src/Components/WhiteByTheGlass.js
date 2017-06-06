@@ -50,15 +50,21 @@ export default class WhiteByTheGlass extends React.Component {
       </View>
         <View style={styles.itemFlexOuter}>
           <View style={styles.itemFlex}>
+
+            <View style={styles.itemFlexInner}>
               <Text style={styles.type}> SANCERRE</Text>
               <Text style={styles.quote}>"Apud Sariacum"</Text>
               <Text style={styles.brand}>Phillipe Raimbault</Text>
               <Text style={styles.region}>Loire, FRANCE</Text>
               <Text style={styles.year}>'14</Text>
+
+              <View>
+                <Text style={styles.price}>15</Text>
+              </View>
+            </View>
+
+
             <HideView />
-          </View>
-          <View>
-            <Text style={styles.price}>15</Text>
           </View>
         </View>
       </View>
@@ -85,6 +91,12 @@ const styles = StyleSheet.create({
   },
   itemFlex: {
     // width: 475,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    position: 'relative'
+  },
+  itemFlexInner: {
+    // width: 500,
     flexDirection: 'row',
     justifyContent: 'space-between',
     position: 'relative'

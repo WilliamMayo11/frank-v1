@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     width: 475,
     borderWidth: 1,
     borderColor: 'black',
-    backgroundColor: 'teal'
+    backgroundColor: '#fafafa'
   },
   hideView: {
     flex: 1,
