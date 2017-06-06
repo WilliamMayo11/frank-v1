@@ -3,11 +3,11 @@ import { View, Text, TouchableOpacity, TouchableWithoutFeedback, StyleSheet } fr
 
 import HideableView from 'react-native-hideable-view';
 
-export default class HideView extends React.Component {
+export default class HideView2 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: false,
+            visible: true,
             noAnimation: true
         };
         this.toggle = this.toggle.bind(this);
@@ -21,7 +21,7 @@ export default class HideView extends React.Component {
 
     render() {
         return (
-            <View style={styles.hideView}>
+            <View style={styles.hideView2}>
                 <HideableView
                   hidden={this.state.hidden}
                   visible={this.state.visible}
@@ -33,10 +33,7 @@ export default class HideView extends React.Component {
                       onPress={this.toggle}
                     >
                       <View style={styles.itemFlex}>
-                          <Text style={styles.textContent}>100% Sauvignon Blanc</Text>
-                          <Text style={styles.textContent}>Clay & silica-rich soil. Aged in stainless steel vats.</Text>
-                          <Text style={styles.textContent}>Goat cheese, salads, raw bar, mussels, leaner/lighter cooked fish dishes and poultry.</Text>
-                          <Text style={styles.textContent}>Bone dry. Light-bodied. Lemon-lime & fresh-cut grass aromas. Briny, rich in minerality with refreshingly high acidity on the palate. White pepper & floral notes on the finish.</Text>
+                          <Text>Sancerre</Text>
                       </View>
                     </TouchableWithoutFeedback>
                 </HideableView>
@@ -61,18 +58,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   itemFlex: {
-    flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'space-between',
     margin: 5,
     width: 475
   },
-  hideView: {
+  hideView2: {
     flex: 1,
-    position: 'absolute',
-  },
-  textContent: {
-    fontSize: 20,
-  },
-
+    position: 'relative',
+  }
 })

@@ -51,13 +51,11 @@ export default class App extends React.Component {
           <View style={styles.whiteColumn}>
             <WhiteByTheGlass />
           </View>
-
           <View style={styles.redColumn}>
             <RedByTheGlass />
           </View>
-        </View>
 
-        <HideView />
+        </View>
 
       </ScrollView>
 
