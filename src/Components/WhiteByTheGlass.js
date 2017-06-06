@@ -43,9 +43,15 @@ export default class WhiteByTheGlass extends React.Component {
     return (
       <View>
 
+      <View style={styles.columnTitle}>
+        <View>
+          <Text style={styles.titleText}>White</Text>
+        </View>
+      </View>
+
         <View style={styles.itemFlexOuter}>
           <View>
-            <Text style={styles.titleText}> SANCERRE</Text>
+            <Text style={styles.wineName}> SANCERRE</Text>
           </View>
         </View>
         <HideView />
@@ -57,9 +63,17 @@ export default class WhiteByTheGlass extends React.Component {
 
 const styles = StyleSheet.create({
 
+  columnTitle: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginBottom: 20
+  },
   titleText: {
-    // fontFamily: 'SnellRoundhand-Bold',
+    fontFamily: 'SnellRoundhand-Bold',
     fontSize: 40,
+  },
+  wineName: {
+    fontSize: 20
   },
   itemFlexOuter: {
     width: 475,

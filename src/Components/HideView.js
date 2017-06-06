@@ -63,8 +63,8 @@ const styles = StyleSheet.create({
   itemFlex: {
     flexWrap: 'wrap',
     flexDirection: 'row',
-    justifyContent: 'space-between',
     margin: 5,
+    marginTop: 72,
     width: 475
   },
   hideView: {
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   textContent: {
-    fontSize: 20,
+    fontSize: 10,
   },
 
 })
