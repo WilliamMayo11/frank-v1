@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa'
   },
   hideView: {
+    marginLeft: 12,
     flex: 1,
     position: 'absolute',
   },

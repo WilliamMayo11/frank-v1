@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
   hideView: {
     flex: 1,
     position: 'absolute',
+    marginLeft: 12
   },
   textContent: {
     fontSize: 10,

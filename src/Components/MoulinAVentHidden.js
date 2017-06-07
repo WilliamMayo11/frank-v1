@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, TouchableWithoutFeedback, StyleSheet } fr
 
 import HideableView from 'react-native-hideable-view';
 
-export default class PetitChablisHidden extends React.Component {
+export default class MoulinAVentHidden extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,10 +33,8 @@ export default class PetitChablisHidden extends React.Component {
                       onPress={this.toggle}
                     >
                       <View style={styles.itemFlex}>
-                          <Text style={styles.textContent}>100% Chardonnay vinified without oak. </Text>
-                          <Text style={styles.textContent}>Dry. Light/medium-bodied. </Text>
-                          <Text style={styles.textContent}>Crisp acidity, bright minerality, ripe citrus & green apple fruit flavors. </Text>
-                          <Text style={styles.textContent}>Pairs well with all seafood, especially oysters. </Text>
+                          <Text style={styles.textContent}>100% Gamay.</Text>
+                          <Text style={styles.textContent}>Light-bodied, fragrant, silky textured. Moderately tannic with medium acidity. Abundant cherry, raspberry, and strawberry flavors. Perfect with poultry, seafood and salads.</Text>
                       </View>
                     </TouchableWithoutFeedback>
                 </HideableView>
@@ -71,7 +69,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa'
   },
   hideView: {
-    marginLeft: 12,
     flex: 1,
     position: 'absolute',
   },

@@ -4,6 +4,10 @@ import { View, Text, StyleSheet, TouchableHighlight, Modal, ScrollView, Touchabl
 import SancerreHidden from './SancerreHidden';
 import PetitChablisHidden from './PetitChablisHidden';
 import PinotBlancHidden from './PinotBlancHidden';
+import GravesBlancHidden from './GravesBlancHidden';
+import CorseBlancHidden from './CorseBlancHidden';
+import StVeranHidden from './StVeranHidden';
+import ChardonnayHidden from './ChardonnayHidden';
 
 export default class WhiteByTheGlass extends React.Component {
 
@@ -27,7 +31,7 @@ export default class WhiteByTheGlass extends React.Component {
               <Text style={styles.type}>SANCERRE</Text>
               <Text style={styles.quote}>"Apud Sariacum"</Text>
               <Text style={styles.brand}>Phillipe Raimbault</Text>
-              <Text style={styles.region}>Loire, FRANCE</Text>
+              <Text style={styles.region}>Loire,  FRANCE</Text>
               <Text style={styles.year}>'14</Text>
             </View>
             <View>
@@ -46,7 +50,7 @@ export default class WhiteByTheGlass extends React.Component {
             <View style={styles.itemFlexInner}>
               <Text style={styles.type}>PETIT CHABLIS</Text>
               <Text style={styles.brand}>Domaine Vincent Dampt</Text>
-              <Text style={styles.region}>Burgundy, FRANCE</Text>
+              <Text style={styles.region}>Burgundy,  FRANCE</Text>
               <Text style={styles.year}>'14</Text>
             </View>
             <View>
@@ -64,7 +68,7 @@ export default class WhiteByTheGlass extends React.Component {
               <Text style={styles.type}>PINOT BLANC</Text>
               <Text style={styles.quote}>"Cuvée Les Amours"</Text>
               <Text style={styles.brand}>Famille Hugel</Text>
-              <Text style={styles.region}>Alsace, FRANCE</Text>
+              <Text style={styles.region}>Alsace,  FRANCE</Text>
               <Text style={styles.year}>'11</Text>
             </View>
             <View>
@@ -75,6 +79,72 @@ export default class WhiteByTheGlass extends React.Component {
         </View>
 
 
+
+        <View style={styles.itemFlexOuter}>
+          <View style={styles.itemFlex}>
+            <View style={styles.itemFlexInner}>
+              <Text style={styles.type}>GRAVES BLANC</Text>
+              <Text style={styles.brand}>Château Coustaut</Text>
+              <Text style={styles.region}>Bordeaux,  FRANCE</Text>
+              <Text style={styles.year}>'13</Text>
+            </View>
+            <View>
+              <Text style={styles.price}>12</Text>
+            </View>
+            <GravesBlancHidden />
+          </View>
+        </View>
+
+
+
+        <View style={styles.itemFlexOuter}>
+          <View style={styles.itemFlex}>
+            <View style={styles.itemFlexInner}>
+              <Text style={styles.type}>CORSE BLANC</Text>
+              <Text style={styles.brand}>Domaine Vico</Text>
+              <Text style={styles.region}>Corsica,  FRANCE</Text>
+              <Text style={styles.year}>'14</Text>
+            </View>
+            <View>
+              <Text style={styles.price}>15</Text>
+            </View>
+            <CorseBlancHidden />
+          </View>
+        </View>
+
+
+        <View style={styles.itemFlexOuter}>
+          <View style={styles.itemFlex}>
+            <View style={styles.itemFlexInner}>
+              <Text style={styles.type}>ST VERAN</Text>
+              <Text style={styles.quote}>“Les Cras”</Text>
+              <Text style={styles.brand}>Domaine des Valanges</Text>
+              <Text style={styles.region}>Burgundy,  FRANCE</Text>
+              <Text style={styles.year}>'14</Text>
+            </View>
+            <View>
+              <Text style={styles.price}>14</Text>
+            </View>
+            <StVeranHidden />
+          </View>
+        </View>
+
+
+        <View style={styles.itemFlexOuter}>
+          <View style={styles.itemFlex}>
+            <View style={styles.itemFlexInner}>
+              <Text style={styles.type}>CHARDONNAY</Text>
+              <Text style={styles.quote}>“Sebella”</Text>
+              <Text style={styles.brand}>Hanzell</Text>
+              <Text style={styles.region}>Sonoma Valley,  USA</Text>
+              <Text style={styles.year}>'14</Text>
+            </View>
+            <View>
+              <Text style={styles.price}>19</Text>
+            </View>
+            <ChardonnayHidden />
+          </View>
+        </View>
 
 
       </View>
@@ -114,33 +184,39 @@ const styles = StyleSheet.create({
     position: 'relative'
   },
   type: {
+    fontFamily: 'AvenirNextCondensed-Medium',
     fontSize: 18,
     margin: 5,
     marginTop: 11,
-    marginLeft: 11
+    marginLeft: 22
   },
   quote: {
-    fontSize: 12,
-    marginLeft: 5,
+    fontFamily: 'AvenirNextCondensed-Medium',
+    fontSize: 14,
+    marginLeft: 7,
     marginTop: 14.8
   },
   region: {
-    fontSize: 12,
-    marginLeft: 5,
+    fontFamily: 'AvenirNextCondensed-Medium',
+    fontSize: 14,
+    marginLeft: 7,
     marginTop: 15.3
   },
   brand: {
-    fontSize: 12,
-    marginLeft: 5,
+    fontFamily: 'AvenirNextCondensed-Medium',
+    fontSize: 14,
+    marginLeft: 7,
     marginTop: 15.3
   },
   year: {
-    fontSize: 12,
-    marginLeft: 5,
+    fontFamily: 'AvenirNextCondensed-Medium',
+    fontSize: 14,
+    marginLeft: 7,
     marginTop: 14.8
   },
   price: {
-    fontSize: 15,
+    fontFamily: 'AvenirNextCondensed-Medium',
+    fontSize: 18,
     marginTop: 13
   },
 

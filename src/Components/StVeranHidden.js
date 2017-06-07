@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, TouchableWithoutFeedback, StyleSheet } fr
 
 import HideableView from 'react-native-hideable-view';
 
-export default class PetitChablisHidden extends React.Component {
+export default class StVeranHidden extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,10 +33,7 @@ export default class PetitChablisHidden extends React.Component {
                       onPress={this.toggle}
                     >
                       <View style={styles.itemFlex}>
-                          <Text style={styles.textContent}>100% Chardonnay vinified without oak. </Text>
-                          <Text style={styles.textContent}>Dry. Light/medium-bodied. </Text>
-                          <Text style={styles.textContent}>Crisp acidity, bright minerality, ripe citrus & green apple fruit flavors. </Text>
-                          <Text style={styles.textContent}>Pairs well with all seafood, especially oysters. </Text>
+                          <Text style={styles.textContent}>100% Chardonnay aged in new and old oak barrels. Medium-bodied. Dry. Aromas & flavors of yellow apples, corn on the cob & meyer lemon, with floral notes and bright acidity. Strong finish. Pairs well with salads, seafood, and white meat dishes, light pastas and grain dishes. St. Veran is named for Veranus of Cavaillon, a 6th Century bishop and dragon-slayer!</Text>
                       </View>
                     </TouchableWithoutFeedback>
                 </HideableView>
