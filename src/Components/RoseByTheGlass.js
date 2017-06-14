@@ -8,7 +8,8 @@ export default class RoseByTheGlass extends React.Component {
   render() {
     return (
       <View>
-
+        <View style={{height: 20}}>
+        </View>
       <View style={styles.columnTitle}>
         <View>
           <Text style={styles.titleText}> Rosé </Text>
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
   columnTitle: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginBottom: 20
+    marginBottom: -5
   },
   titleText: {
     fontFamily: 'SnellRoundhand-Bold',

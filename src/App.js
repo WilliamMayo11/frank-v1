@@ -74,8 +74,9 @@ export default class App extends React.Component {
 
 
         <View style={{marginTop: 70}}>
-
         </View>
+
+
         <View style={styles.byTheGlassContainer}>
           <View style={styles.line}>
             <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 2}}/>
@@ -100,6 +101,35 @@ export default class App extends React.Component {
         </View>
 
 
+        <View style={{marginTop: 70}}>
+        </View>
+
+
+        <View style={styles.byTheGlassContainer}>
+          <View style={styles.line}>
+            <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 2}}/>
+          </View>
+          <Text style={styles.byTheGlassText}>CHAMPAGNE</Text>
+          <View style={styles.line}>
+            <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 2}}/>
+          </View>
+        </View>
+
+        <View style={styles.menuColumns}>
+
+          <View style={styles.whiteColumn}>
+            <WhiteByTheGlass />
+            <RoseByTheGlass />
+          </View>
+
+          <View style={styles.redColumn}>
+            <RedByTheGlass />
+          </View>
+
+        </View>
+
+
+
 
       </ScrollView>
 
@@ -116,7 +146,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fafafa'
   },
   titleContainerOuter: {
-    marginTop: 30
+    marginTop: 10
   },
   titleContainer: {
     flexDirection: 'column',
@@ -134,7 +164,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
   },
   byTheGlassText: {
     color: '#5B7E90',
@@ -148,7 +178,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 20
+    marginTop: 10
   },
   whiteColumn: {
     marginRight: 50

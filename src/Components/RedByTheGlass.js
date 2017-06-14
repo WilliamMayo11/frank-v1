@@ -8,6 +8,10 @@ import GravesBlancHidden from './GravesBlancHidden';
 import CorseBlancHidden from './CorseBlancHidden';
 import StVeranHidden from './StVeranHidden';
 import ChardonnayHidden from './ChardonnayHidden';
+import StEstepheHidden from './StEstepheHidden';
+import VacqueyrasHidden from './VacqueyrasHidden';
+import PinotNoirHidden from './PinotNoirHidden';
+import NapaZinfandelHidden from './NapaZinfandelHidden';
 
 export default class RedByTheGlass extends React.Component {
 
@@ -48,7 +52,6 @@ export default class RedByTheGlass extends React.Component {
           <View style={styles.itemFlex}>
             <View style={styles.itemFlexInner}>
               <Text style={styles.type}>GIVRY 1ER CRU</Text>
-              <Text style={styles.quote}>“Cemillons”</Text>
               <Text style={styles.brand}>Domaine Seguin-Manuel</Text>
               <Text style={styles.region}>Burgundy,  FRANCE</Text>
               <Text style={styles.year}>'14</Text>
@@ -82,15 +85,15 @@ export default class RedByTheGlass extends React.Component {
         <View style={styles.itemFlexOuter}>
           <View style={styles.itemFlex}>
             <View style={styles.itemFlexInner}>
-              <Text style={styles.type}>GRAVES BLANC</Text>
-              <Text style={styles.brand}>Château Coustaut</Text>
-              <Text style={styles.region}>Bordeaux, FRANCE</Text>
-              <Text style={styles.year}>'13</Text>
+              <Text style={styles.type}>ST. ESTEPHE</Text>
+              <Text style={styles.brand}>Château Haut Beausejour</Text>
+              <Text style={styles.region}>Bordeaux,  FRANCE</Text>
+              <Text style={styles.year}>'12</Text>
             </View>
             <View>
-              <Text style={styles.price}>12</Text>
+              <Text style={styles.price}>20</Text>
             </View>
-            <GravesBlancHidden />
+            <StEstepheHidden />
           </View>
         </View>
 
@@ -99,15 +102,15 @@ export default class RedByTheGlass extends React.Component {
         <View style={styles.itemFlexOuter}>
           <View style={styles.itemFlex}>
             <View style={styles.itemFlexInner}>
-              <Text style={styles.type}>CORSE BLANC</Text>
-              <Text style={styles.brand}>Domaine Vico</Text>
-              <Text style={styles.region}>Corsica, FRANCE</Text>
-              <Text style={styles.year}>'14</Text>
+              <Text style={styles.type}>VACQUEYRAS</Text>
+              <Text style={styles.brand}>Domaine La Garrigue</Text>
+              <Text style={styles.region}>Rhone,  FRANCE</Text>
+              <Text style={styles.year}>'12</Text>
             </View>
             <View>
-              <Text style={styles.price}>15</Text>
+              <Text style={styles.price}>16</Text>
             </View>
-            <CorseBlancHidden />
+            <VacqueyrasHidden />
           </View>
         </View>
 
@@ -115,16 +118,16 @@ export default class RedByTheGlass extends React.Component {
         <View style={styles.itemFlexOuter}>
           <View style={styles.itemFlex}>
             <View style={styles.itemFlexInner}>
-              <Text style={styles.type}>ST VERAN</Text>
-              <Text style={styles.quote}>“Les Cras”</Text>
-              <Text style={styles.brand}>Domaine des Valanges</Text>
-              <Text style={styles.region}>Burgundy, FRANCE</Text>
-              <Text style={styles.year}>'14</Text>
+              <Text style={styles.type}>PINOT NOIR</Text>
+              <Text style={styles.quote}>"L’Umami"</Text>
+              <Text style={styles.brand}>Willamette Valley</Text>
+              <Text style={styles.region}>Oregon,  USA</Text>
+              <Text style={styles.year}>'15</Text>
             </View>
             <View>
-              <Text style={styles.price}>14</Text>
+              <Text style={styles.price}>13</Text>
             </View>
-            <StVeranHidden />
+            <PinotNoirHidden />
           </View>
         </View>
 
@@ -132,16 +135,16 @@ export default class RedByTheGlass extends React.Component {
         <View style={styles.itemFlexOuter}>
           <View style={styles.itemFlex}>
             <View style={styles.itemFlexInner}>
-              <Text style={styles.type}>CHARDONNAY</Text>
-              <Text style={styles.quote}>“Sebella”</Text>
-              <Text style={styles.brand}>Hanzell</Text>
-              <Text style={styles.region}>Sonoma Valley, USA</Text>
-              <Text style={styles.year}>'14</Text>
+              <Text style={styles.type}>ZINFANDEL</Text>
+              <Text style={styles.quote}>“Three valleys”</Text>
+              <Text style={styles.brand}>Ridge Vineyards</Text>
+              <Text style={styles.region}>Sonoma Valley,  USA</Text>
+              <Text style={styles.year}>'12</Text>
             </View>
             <View>
               <Text style={styles.price}>19</Text>
             </View>
-            <ChardonnayHidden />
+            <NapaZinfandelHidden />
           </View>
         </View>
 
@@ -156,7 +159,7 @@ const styles = StyleSheet.create({
   columnTitle: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginBottom: 20
+    marginBottom: 5
   },
   titleText: {
     fontFamily: 'SnellRoundhand-Bold',

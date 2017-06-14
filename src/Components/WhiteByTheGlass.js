@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
   columnTitle: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginBottom: 20
+    marginBottom: 5,
   },
   titleText: {
     fontFamily: 'SnellRoundhand-Bold',

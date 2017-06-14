@@ -8,6 +8,8 @@ export default class SparklingByTheGlass extends React.Component {
   render() {
     return (
       <View>
+        <View style={{height: 30}}>
+        </View>
 
       <View style={styles.columnTitle}>
         <View>
@@ -49,7 +51,7 @@ const styles = StyleSheet.create({
   columnTitle: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginBottom: 20
+    marginBottom: -5
   },
   titleText: {
     fontFamily: 'SnellRoundhand-Bold',

@@ -10,6 +10,8 @@ export default class Carafes extends React.Component {
     return (
       <View>
 
+        <View style={{height: 20}}>
+        </View>
 
           <View style={styles.byTheGlassContainer}>
 
