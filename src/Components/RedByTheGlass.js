@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableHighlight, Modal, ScrollView, Touchabl
 
 import MoulinAVentHidden from './MoulinAVentHidden';
 import GivryHidden from './GivryHidden';
-import PinotBlancHidden from './PinotBlancHidden';
+import StEmilionHidden from './StEmilionHidden';
 import GravesBlancHidden from './GravesBlancHidden';
 import CorseBlancHidden from './CorseBlancHidden';
 import StVeranHidden from './StVeranHidden';
@@ -65,16 +65,15 @@ export default class RedByTheGlass extends React.Component {
         <View style={styles.itemFlexOuter}>
           <View style={styles.itemFlex}>
             <View style={styles.itemFlexInner}>
-              <Text style={styles.type}>PINOT BLANC</Text>
-              <Text style={styles.quote}>"Cuvée Les Amours"</Text>
-              <Text style={styles.brand}>Famille Hugel</Text>
-              <Text style={styles.region}>Alsace, FRANCE</Text>
-              <Text style={styles.year}>'11</Text>
+              <Text style={styles.type}>ST EMILION</Text>
+              <Text style={styles.brand}>Clos Castelot</Text>
+              <Text style={styles.region}>Bordeaux (Right Bank),  FRANCE</Text>
+              <Text style={styles.year}>'12</Text>
             </View>
             <View>
-              <Text style={styles.price}>11</Text>
+              <Text style={styles.price}>14</Text>
             </View>
-            <PinotBlancHidden />
+            <StEmilionHidden />
           </View>
         </View>
 

@@ -4,6 +4,9 @@ import { ScrollView, Text, View, StyleSheet } from 'react-native';
 import RedByTheGlass from './Components/RedByTheGlass';
 import WhiteByTheGlass from './Components/WhiteByTheGlass';
 import HideView from './Components/HideView';
+import RoseByTheGlass from './Components/RoseByTheGlass';
+import Carafes from './Components/Carafes';
+import SparklingByTheGlass from './Components/SparklingByTheGlass';
 
 export default class App extends React.Component {
 
@@ -31,13 +34,13 @@ export default class App extends React.Component {
 
           <View style={styles.byTheGlassContainer}>
             <View style={styles.line}>
-              <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 1}}/>
+              <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 2}}/>
             </View>
 
             <Text style={styles.byTheGlassText}>BY THE GLASS</Text>
 
             <View style={styles.line}>
-              <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 1}}/>
+              <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 2}}/>
             </View>
           </View>
 
@@ -51,11 +54,52 @@ export default class App extends React.Component {
           <View style={styles.whiteColumn}>
             <WhiteByTheGlass />
           </View>
+
           <View style={styles.redColumn}>
             <RedByTheGlass />
           </View>
 
         </View>
+
+
+        <View style={styles.menuColumns}>
+          <View style={styles.whiteColumn}>
+            <RoseByTheGlass />
+            <SparklingByTheGlass />
+          </View>
+          <View style={styles.redColumn}>
+            <Carafes />
+          </View>
+        </View>
+
+
+        <View style={{marginTop: 70}}>
+
+        </View>
+        <View style={styles.byTheGlassContainer}>
+          <View style={styles.line}>
+            <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 2}}/>
+          </View>
+          <Text style={styles.byTheGlassText}>HALF BOTTLES</Text>
+          <View style={styles.line}>
+            <View style={{borderBottomColor: '#5B7E90', borderBottomWidth: 2}}/>
+          </View>
+        </View>
+
+        <View style={styles.menuColumns}>
+
+          <View style={styles.whiteColumn}>
+            <WhiteByTheGlass />
+            <RoseByTheGlass />
+          </View>
+
+          <View style={styles.redColumn}>
+            <RedByTheGlass />
+          </View>
+
+        </View>
+
+
 
       </ScrollView>
 
@@ -89,11 +133,12 @@ const styles = StyleSheet.create({
   byTheGlassContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 40,
   },
   byTheGlassText: {
     color: '#5B7E90',
-    fontSize: 20
+    fontSize: 26
   },
   line: {
     width: 410,
