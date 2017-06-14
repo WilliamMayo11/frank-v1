@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableHighlight, Modal, ScrollView, TouchableWithoutFeedback } from 'react-native';
 
-import SancerreHidden from './SancerreHidden';
+import LuberonHidden from './LuberonHidden';
+import BouchesDuRhoneHidden from './BouchesDuRhoneHidden';
 
 export default class Carafes extends React.Component {
 
@@ -27,16 +28,16 @@ export default class Carafes extends React.Component {
             <View style={styles.itemFlexOuter}>
               <View style={styles.itemFlex}>
                 <View style={styles.itemFlexInner}>
-                  <Text style={styles.type}>SANCERRE</Text>
-                  <Text style={styles.quote}>"Apud Sariacum"</Text>
-                  <Text style={styles.brand}>Phillipe Raimbault</Text>
-                  <Text style={styles.region}>Loire,  FRANCE</Text>
+                  <Text style={styles.type}>LUBERON</Text>
+                  <Text style={styles.quote}>“La Ciboise”</Text>
+                  <Text style={styles.brand}>M. Chapoutier</Text>
+                  <Text style={styles.region}>Provence,  FRANCE</Text>
                   <Text style={styles.year}>'14</Text>
                 </View>
                 <View>
-                  <Text style={styles.price}>15</Text>
+                  <Text style={styles.price}>23</Text>
                 </View>
-                <SancerreHidden />
+                <LuberonHidden />
               </View>
             </View>
 
@@ -50,16 +51,15 @@ export default class Carafes extends React.Component {
             <View style={styles.itemFlexOuter}>
               <View style={styles.itemFlex}>
                 <View style={styles.itemFlexInner}>
-                  <Text style={styles.type}>SANCERRE</Text>
-                  <Text style={styles.quote}>"Apud Sariacum"</Text>
-                  <Text style={styles.brand}>Phillipe Raimbault</Text>
-                  <Text style={styles.region}>Loire,  FRANCE</Text>
+                  <Text style={styles.type}>BOUCHES DU RHONE</Text>
+                  <Text style={styles.brand}>Isle Saint Pierre</Text>
+                  <Text style={styles.region}>Rhone Valley,  FRANCE</Text>
                   <Text style={styles.year}>'14</Text>
                 </View>
                 <View>
-                  <Text style={styles.price}>15</Text>
+                  <Text style={styles.price}>23</Text>
                 </View>
-                <SancerreHidden />
+                <BouchesDuRhoneHidden />
               </View>
             </View>
 
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
   },
   itemFlexOuter: {
-    width: 475,
+    width: 425,
     flexDirection: 'row',
     justifyContent: 'space-between',
     position: 'relative',
